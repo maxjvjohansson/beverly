@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,9 +16,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->foreignId('category_id')->constrained()->onDelete('set null');
+            $table->foreignIdFor(Category::class, 'category_id')->nullable()->constrained()->nullOnDelete();
             $table->decimal('price', 10, 2);
-            $table->$table->timestamps();
+            $table->timestamps();
         });
     }
 
