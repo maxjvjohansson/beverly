@@ -22,7 +22,7 @@ class LoginController extends Controller
         }
 
         return back()->withErrors([
-            'login' => 'Not valid. Please try again.',
+            'login' => 'Invalid credentials. Please try again.',
         ])->withInput();
     }
 }
