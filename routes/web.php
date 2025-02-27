@@ -3,16 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\DashboardController;
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::post('/login', [LoginController::class, '__invoke']);
+Route::view('/', 'index')->name('login')->middleware('guest');
+Route::post('/login', LoginController::class);
+Route::get('/dashboard', DashboardController::class)->middleware('auth');
 
 Route::post('/logout', function () {
     Auth::logout();
