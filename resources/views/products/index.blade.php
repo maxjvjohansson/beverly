@@ -1,7 +1,20 @@
 <x-dashboard-layout>
-
     <section class="products">
-        <h2>Products</h2>
+        <div class="header">
+            <h2>Products</h2>
+            <button class="add-product">+ Add Product</button> <!-- Change the + to an icon instead !-->
+        </div>
+
+        <div class="filter-bar">
+            <input type="text" placeholder="Search products..." id="search">
+            <select id="category">
+                <option value="">All Categories</option>
+            </select>
+            <select id="sort">
+                <option value="price_asc">Price: Low to High</option>
+                <option value="price_desc">Price: High to Low</option>
+            </select>
+        </div>
 
         @if($products->isEmpty())
             <p>No products available.</p>
@@ -10,7 +23,8 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>Product</th>
+                        <th>Category</th>
                         <th>Price</th>
                         <th>Actions</th>
                     </tr>
@@ -19,10 +33,15 @@
                     @foreach($products as $product)
                     <tr>
                         <td>{{ $product->id }}</td>
-                        <td>{{ $product->name }}</td>
+                        <td>
+                            <div class="product-info">
+                                <span>{{ $product->name }}</span>
+                            </div>
+                        </td>
+                        <td>{{ $product->category->name ?? 'N/A' }}</td>
                         <td>${{ $product->price }}</td>
                         <td>
-                            <a href="#">Edit</a>
+                            <a href="#" class="edit">Edit</a> <!-- Use icons instead? !-->
                             <a href="#" class="delete">Delete</a>
                         </td>
                     </tr>
@@ -30,6 +49,9 @@
                 </tbody>
             </table>
         @endif
-    </section>
 
+        <div class="pagination">
+            {{ $products->links() }}
+        </div>
+    </section>
 </x-dashboard-layout>

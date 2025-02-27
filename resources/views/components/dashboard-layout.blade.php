@@ -7,6 +7,7 @@
     <title>Beverly</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/products.css') }}">
 </head>
 <body>
     <main>
