@@ -1,14 +1,17 @@
 <x-dashboard-layout>
     <section class="products">
         <div class="header">
-            <h2>Products</h2>
-            <button class="add-product">+ Add Product</button> <!-- Change the + to an icon instead !-->
+            <div>
+                <h2>Products</h2>
+                <p>Manage your beverage products</p>
+            </div>
+            <button class="add-product">+ Add Product</button> <!-- Change the + to an icon instead -->
         </div>
-
+        
         <div class="filter-bar">
             <input type="text" placeholder="Search products..." id="search">
             <select id="category">
-                <option value="">All Categories</option>
+                <option value="">All Categories</option> <!-- Add categories dynamically-->
             </select>
             <select id="sort">
                 <option value="price_asc">Price: Low to High</option>
@@ -41,7 +44,7 @@
                         <td>{{ $product->category->name ?? 'N/A' }}</td>
                         <td>${{ $product->price }}</td>
                         <td>
-                            <a href="#" class="edit">Edit</a> <!-- Use icons instead? !-->
+                            <a href="#" class="edit">Edit</a> <!-- Use icons instead? -->
                             <a href="#" class="delete">Delete</a>
                         </td>
                     </tr>

@@ -1,4 +1,4 @@
-<nav>
+<nav class="navbar">
     <section class="menu-heading">
         <h2>Beverly</h2>
     </section>
