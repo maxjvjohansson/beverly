@@ -21,14 +21,13 @@ nav {
     padding: 1rem 1.5rem;
     text-align: center;
     border-bottom: 1px solid #E5E7EB;
-    background: rgba(0, 0, 0, 0.00);
 }
 
 ul {
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin: 0;
+    margin-top: 1.5rem;
     padding: 0;
 }
 

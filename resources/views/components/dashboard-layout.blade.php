@@ -7,7 +7,6 @@
     <title>Beverly</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 </head>
 <body>
     <main>
