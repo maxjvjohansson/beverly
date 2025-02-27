@@ -1,18 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
-Route::get('/', function () {
-    return view('index');
+
+Route::view('/', 'index')->name('login')->middleware('guest');
+Route::get('/login', LoginController::class);
+Route::post('/login', LoginController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', DashboardController::class)->name('dashboard');
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+    Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::post('/login', [LoginController::class, '__invoke']);
 
 Route::post('/logout', function () {
     Auth::logout();

@@ -1,7 +1,12 @@
-<x-layout>
+<x-dashboard-layout>
 
-    WELCOME TO DASHBOARD!
+    <section class="dashboard">
 
-    <x-logout-form />
+    <h2>Welcome back {{ $user->name }} to Beverly dashboard!<h2>
+        
+        <x-logout-form />
 
-</x-layout>
+    </section>
+
+
+</x-dashboard-layout>
