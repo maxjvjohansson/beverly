@@ -13,6 +13,7 @@
                         <th>ID</th>
                         <th>Name</th>
                         <th>Description</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,6 +21,7 @@
                     <tr>
                         <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
+                            <td>{{ $category->description }}</td>
                             <td>
                             <a href="#" class="edit">Edit</a>
                             <a href="#" class="delete">Delete</a>
