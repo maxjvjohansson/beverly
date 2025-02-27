@@ -1,6 +1,8 @@
 <x-dashboard-layout>
     <section class="categories">
-        <h2>Categories</h2>
+        <div class="header">
+                <h2>Categories</h2>
+            </div>
     
         @if($categories->isEmpty())
             <p>No categories available.</p>
@@ -19,7 +21,7 @@
                         <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
                             <td>
-                            <a href="#">Edit</a>
+                            <a href="#" class="edit">Edit</a>
                             <a href="#" class="delete">Delete</a>
                         </td>
                     </tr>

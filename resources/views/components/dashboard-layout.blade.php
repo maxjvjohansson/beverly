@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/products.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/categories.css') }}">
 </head>
 <body>
     <main>
