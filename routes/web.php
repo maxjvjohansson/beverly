@@ -9,6 +9,7 @@ use App\Http\Controllers\CategoryController;
 
 
 Route::view('/', 'index')->name('login')->middleware('guest');
+Route::get('/login', LoginController::class);
 Route::post('/login', LoginController::class);
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
