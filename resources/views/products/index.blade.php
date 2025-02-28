@@ -1,4 +1,11 @@
 <x-dashboard-layout>
+    
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+
     <section class="products">
         <div class="header">
             <div>
@@ -54,7 +61,7 @@
                         <td>{{ $product->category->name ?? 'N/A' }}</td>
                         <td>${{ $product->price }}</td>
                         <td>
-                            <a href="#" class="edit">Edit</a> <!-- Use icons instead? -->
+                            <a href="{{ route('products.edit', $product->id) }}" class="edit">Edit</a><!-- Use icons instead? -->
                             <a href="#" class="delete">Delete</a>
                         </td>
                     </tr>
