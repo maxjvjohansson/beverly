@@ -8,16 +8,26 @@
             <button class="add-product">+ Add Product</button> <!-- Change the + to an icon instead -->
         </div>
         
-        <div class="filter-bar">
-            <input type="text" placeholder="Search products..." id="search">
-            <select id="category">
-                <option value="">All Categories</option> <!-- Add categories dynamically-->
+        <form action="{{ route('products.index') }}" method="GET" id="filter" class="filter-bar">
+
+            <input type="text" placeholder="Search products..." id="search" name="search" value="{{ request('search') }}">
+                
+            <select name="category" id="category" onchange="this.form.submit()" id="category">
+                <option value="">All Categories</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}" {{ request('category') == $category->id ? 'selected' : '' }}>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
             </select>
-            <select id="sort">
-                <option value="price_asc">Price: Low to High</option>
-                <option value="price_desc">Price: High to Low</option>
+        
+            <select name="price_order" onchange="this.form.submit()" id="sort">
+                <option value="">Sort by price</option>
+                <option value="asc" {{ request('price_order') == 'asc' ? 'selected' : '' }}>Lowest to Highest</option>
+                <option value="desc" {{ request('price_order') == 'desc' ? 'selected' : '' }}>Highest to Lowest</option>
             </select>
-        </div>
+
+        </form><!-- end filter -->
 
         @if($products->isEmpty())
             <p>No products available.</p>
@@ -54,7 +64,8 @@
         @endif
 
         <div class="pagination">
-            {{ $products->links() }}
+            {{ $products->appends(request()->query())->links() }}
         </div>
+        
     </section>
 </x-dashboard-layout>
