@@ -55,14 +55,19 @@
                         <td>{{ $product->id }}</td>
                         <td>
                             <div class="product-info">
-                                <span>{{ $product->name }}</span>
+                                <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a>
                             </div>
                         </td>
                         <td>{{ $product->category->name ?? 'N/A' }}</td>
                         <td>${{ $product->price }}</td>
                         <td>
                             <a href="{{ route('products.edit', $product->id) }}" class="edit">Edit</a><!-- Use icons instead? -->
-                            <a href="#" class="delete">Delete</a>
+                            <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display: inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="delete" onclick="return confirm('Are you sure you want to delete this product?')">Delete</button>
+                            </form>
+                            
                         </td>
                     </tr>
                     @endforeach
