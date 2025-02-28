@@ -5,7 +5,7 @@
                 <h2>Products</h2>
                 <p>Manage your beverage products</p>
             </div>
-            <button class="add-product">+ Add Product</button> <!-- Change the + to an icon instead -->
+            <a href="{{ route('products.create') }}" class="add-product-btn">+ Add Product</a> <!-- Change the + to an icon instead -->
         </div>
         
         <form action="{{ route('products.index') }}" method="GET" id="filter" class="filter-bar">
