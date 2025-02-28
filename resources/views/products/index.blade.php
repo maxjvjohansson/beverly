@@ -1,11 +1,18 @@
 <x-dashboard-layout>
+    
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+
     <section class="products">
         <div class="header">
             <div>
                 <h2>Products</h2>
                 <p>Manage your beverage products</p>
             </div>
-            <button class="add-product">+ Add Product</button> <!-- Change the + to an icon instead -->
+            <a href="{{ route('products.create') }}" class="add-product-btn">+ Add Product</a> <!-- Change the + to an icon instead -->
         </div>
         
         <form action="{{ route('products.index') }}" method="GET" id="filter" class="filter-bar">
@@ -48,14 +55,19 @@
                         <td>{{ $product->id }}</td>
                         <td>
                             <div class="product-info">
-                                <span>{{ $product->name }}</span>
+                                <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a>
                             </div>
                         </td>
                         <td>{{ $product->category->name ?? 'N/A' }}</td>
                         <td>${{ $product->price }}</td>
                         <td>
-                            <a href="#" class="edit">Edit</a> <!-- Use icons instead? -->
-                            <a href="#" class="delete">Delete</a>
+                            <a href="{{ route('products.edit', $product->id) }}" class="edit">Edit</a><!-- Use icons instead? -->
+                            <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display: inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="delete" onclick="return confirm('Are you sure you want to delete this product?')">Delete</button>
+                            </form>
+                            
                         </td>
                     </tr>
                     @endforeach
