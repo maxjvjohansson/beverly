@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\UserController;
 
 
 Route::view('/', 'index')->name('login')->middleware('guest');
@@ -26,6 +27,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
 
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
+    Route::get('/profile', [UserController::class, 'profile'])->name('profile.edit');
+    Route::put('/profile', [UserController::class, 'updateProfile'])->name('profile.update');
+    Route::patch('/users/{user}/role', [UserController::class, 'updateRole'])->middleware('can:manage-users')->name('users.updateRole');
 });
 
 
