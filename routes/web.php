@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/users', [UserController::class, 'store'])->middleware('can:manage-users')->name('users.store');
     Route::get('/users/{user}/edit', [UserController::class, 'edit'])->middleware('can:update,user')->name('users.edit');
     Route::put('/users/{user}', [UserController::class, 'update'])->middleware('can:update,user')->name('users.update');
-    Route::patch('/users/{user}/role', [UserController::class, 'updateRole'])->middleware('can:manage-users')->name('users.updateRole');
+    Route::patch('/users/{user}/role', [UserController::class, 'updateRole'])->name('users.updateRole');
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->middleware('can:manage-users')->name('users.destroy');
 });
 

@@ -65,6 +65,12 @@ class UserController extends Controller
 
     public function updateRole(Request $request, User $user)
     {
+        $currentUser = $request->user();
+
+        if ($currentUser->cannot('manage-users')) {
+            return redirect()->route('users.index')->with('error', 'You do not have permission to change user roles.');
+        }
+
         $request->validate([
             'role' => 'required|in:admin,employee',
         ]);
