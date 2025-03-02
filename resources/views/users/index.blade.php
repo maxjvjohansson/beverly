@@ -36,19 +36,24 @@
                         <tr>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
-                            <td>{{ $user->role }}</td>
+                            <td><form method="POST" action="{{ route('users.updateRole', $user) }}" style="display: inline;">
+                                @csrf
+                                @method('PATCH')
+                                <select name="role" onchange="this.form.submit()" class="role-selector">
+                                    <option value="employee" {{ $user->role === 'employee' ? 'selected' : '' }}>Employee</option>
+                                    <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
+                                </select>
+                            </form></td>
                             @can('manage-users')
                                 <td>
                                     <a href="{{ route('users.edit', $user) }}" class="edit">Edit</a>
-                                    
-                                    <form method="POST" action="{{ route('users.updateRole', $user) }}" style="display: inline;">
+                                    <form action="{{ route('users.destroy', $user) }}" method="POST" style="display: inline;">
                                         @csrf
-                                        @method('PATCH')
-                                        <select name="role" onchange="this.form.submit()" class="role-selector">
-                                            <option value="employee" {{ $user->role === 'employee' ? 'selected' : '' }}>Employee</option>
-                                            <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
-                                        </select>
-                                    </form>
+                                        @method('DELETE')
+                                        <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete this user?')">
+                                            Delete
+                                        </button>
+                                    </form>                                    
                                 </td>
                             @endcan
                         </tr>
