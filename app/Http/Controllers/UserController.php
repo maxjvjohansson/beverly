@@ -46,10 +46,17 @@ class UserController extends Controller
 
     public function update(Request $request, User $user)
     {
+
         $rules = [
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email,' . $user->id,
         ];
+
+        if ($request->filled('password')) {
+            if ($request->user()->id !== $user->id) {
+                return back()->with('error', 'You are not allowed to change passwords for other users.');
+            }
+        }
 
         if ($request->filled('current_password') || $request->filled('password') || $request->filled('password_confirmation')) {
             $rules['current_password'] = 'required';
