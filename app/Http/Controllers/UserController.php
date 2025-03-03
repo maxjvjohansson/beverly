@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -45,16 +46,33 @@ class UserController extends Controller
 
     public function update(Request $request, User $user)
     {
-        $validated = $request->validate([
+
+        $rules = [
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email,' . $user->id,
-            'password' => 'nullable|min:3|confirmed',
-        ]);
+        ];
+
+        if ($request->filled('password')) {
+            if ($request->user()->id !== $user->id) {
+                return back()->with('error', 'You are not allowed to change passwords for other users.');
+            }
+        }
+
+        if ($request->filled('current_password') || $request->filled('password') || $request->filled('password_confirmation')) {
+            $rules['current_password'] = 'required';
+            $rules['password'] = 'required|min:3|confirmed';
+        }
+
+        $validated = $request->validate($rules);
 
         $user->name = $validated['name'];
         $user->email = $validated['email'];
 
-        if (!empty($validated['password'])) {
+        if ($request->filled('current_password')) {
+            if (!Hash::check($request->current_password, $user->password)) {
+                return back()->withErrors(['current_password' => 'The current password is incorrect.']);
+            }
+
             $user->password = bcrypt($validated['password']);
         }
 
@@ -63,8 +81,15 @@ class UserController extends Controller
         return redirect()->route('users.index')->with('success', 'User updated successfully.');
     }
 
+
     public function updateRole(Request $request, User $user)
     {
+        $currentUser = $request->user();
+
+        if ($currentUser->cannot('manage-users')) {
+            return redirect()->route('users.index')->with('error', 'You do not have permission to change user roles.');
+        }
+
         $request->validate([
             'role' => 'required|in:admin,employee',
         ]);
