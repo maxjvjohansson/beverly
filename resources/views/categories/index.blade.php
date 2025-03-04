@@ -11,7 +11,7 @@
         <header class="header">
             <h2>Categories</h2>
             <p>Manage beverage categories</p>
-            <button class="add-product-btn" type="button" onclick="window.location.href='{{ route('categories.create') }}'">
+            <button class="add-btn" type="button" onclick="window.location.href='{{ route('categories.create') }}'">
                 <span class="icon">+</span> Add Category
             </button><!-- improve accessability with a button -->
         </header>

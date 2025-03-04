@@ -12,7 +12,9 @@
                 <h2>Products</h2>
                 <p>Manage your beverage products</p>
             </div>
-            <a href="{{ route('products.create') }}" class="add-product-btn">+ Add Product</a> <!-- Change the + to an icon instead -->
+            <button class="add-btn" type="button" onclick="window.location.href='{{ route('products.create') }}'">
+                <span class="icon">+</span> Add Product
+            </button> <!-- Change the + to an icon instead -->
         </div>
         
         <form action="{{ route('products.index') }}" method="GET" id="filter" class="filter-bar">
@@ -61,7 +63,9 @@
                         <td>{{ $product->category->name ?? 'N/A' }}</td>
                         <td>${{ $product->price }}</td>
                         <td>
-                            <a href="{{ route('products.edit', $product->id) }}" class="edit">Edit</a><!-- Use icons instead? -->
+                            <button class="edit" type="button" onclick="window.location.href='{{ route('products.edit', $product->id) }}'">
+                                Edit
+                            </button><!-- Use icons instead? -->
                             @can('delete', $product)
                                 <form action="{{ route('products.destroy', $product) }}" method="POST" style="display: inline;">
                                     @csrf
