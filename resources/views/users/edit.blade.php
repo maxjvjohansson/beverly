@@ -16,7 +16,12 @@
         </div>
 
         <div>
-            <label>New Password (optional)</label>
+            <label>Current Password</label>
+            <input type="password" name="current_password">
+        </div>
+
+        <div>
+            <label>New Password</label>
             <input type="password" name="password">
         </div>
 

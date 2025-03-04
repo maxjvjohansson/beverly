@@ -36,14 +36,20 @@
                         <tr>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
-                            <td><form method="POST" action="{{ route('users.updateRole', $user) }}" style="display: inline;">
-                                @csrf
-                                @method('PATCH')
-                                <select name="role" onchange="this.form.submit()" class="role-selector">
-                                    <option value="employee" {{ $user->role === 'employee' ? 'selected' : '' }}>Employee</option>
-                                    <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
-                                </select>
-                            </form></td>
+                            <td>
+                                @can('manage-users')
+                                    <form method="POST" action="{{ route('users.updateRole', $user) }}" style="display: inline;">
+                                        @csrf
+                                        @method('PATCH')
+                                        <select name="role" onchange="this.form.submit()" class="role-selector">
+                                            <option value="employee" {{ $user->role === 'employee' ? 'selected' : '' }}>Employee</option>
+                                            <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
+                                        </select>
+                                    </form>
+                                @else
+                                    {{ ucfirst($user->role) }} 
+                                @endcan
+                            </td>
                             @can('manage-users')
                                 <td>
                                     <a href="{{ route('users.edit', $user) }}" class="edit">Edit</a>

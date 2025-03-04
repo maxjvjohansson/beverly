@@ -21,7 +21,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/products', [ProductController::class, 'store'])->name('products.store');
     Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
     Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
-    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->middleware('can:delete,product')->name('products.destroy');
     Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
 
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
@@ -37,7 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/users', [UserController::class, 'store'])->middleware('can:manage-users')->name('users.store');
     Route::get('/users/{user}/edit', [UserController::class, 'edit'])->middleware('can:update,user')->name('users.edit');
     Route::put('/users/{user}', [UserController::class, 'update'])->middleware('can:update,user')->name('users.update');
-    Route::patch('/users/{user}/role', [UserController::class, 'updateRole'])->middleware('can:manage-users')->name('users.updateRole');
+    Route::patch('/users/{user}/role', [UserController::class, 'updateRole'])->name('users.updateRole');
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->middleware('can:manage-users')->name('users.destroy');
 });
 
