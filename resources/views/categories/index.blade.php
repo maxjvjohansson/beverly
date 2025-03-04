@@ -40,12 +40,14 @@
                             Edit
                         </button><!-- improve accessability with a button -->
 
-                        @can('delete', $category->id)
-                        <form action="{{ route('categories.destroy', $category->id) }}" method="POST">
+                        @can('delete', $category)
+                            <form action="{{ route('categories.destroy', $category) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="delete" onclick="return confirm('Are you sure you want to delete this category?')">Delete</button>
-                        </form>
+                                <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete this category?')">
+                                    Delete
+                                </button>
+                            </form>
                         @endcan
                     </td>
                 </tr>
