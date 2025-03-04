@@ -1,4 +1,4 @@
-<x-dashboard-layout>
+<x-layout>
 
     <section class="dashboard">
 
@@ -9,4 +9,4 @@
     </section>
 
 
-</x-dashboard-layout>
+</x-layout>

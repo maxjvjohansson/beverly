@@ -1,4 +1,4 @@
-<x-dashboard-layout>
+<x-layout>
 
     @if(session('success'))
         <div class="alert alert-success">
@@ -69,4 +69,4 @@
         @endif
     </section>
 
-</x-dashboard-layout>
+</x-layout>

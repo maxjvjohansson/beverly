@@ -9,7 +9,7 @@ main {
     font: normal 1rem sans-serif;
 }
 
-nav {
+.navbar {
     height: 100vh;
     position: sticky;
     top: 0;

@@ -1,4 +1,4 @@
-<x-dashboard-layout>
+<x-layout>
 
     <section class="product-details">
         <h2>{{ $product->name }}</h2>
@@ -24,4 +24,4 @@
         </div>
     </section>
 
-</x-dashboard-layout>
+</x-layout>

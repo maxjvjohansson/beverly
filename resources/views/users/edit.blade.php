@@ -1,4 +1,4 @@
-<x-dashboard-layout>
+<x-layout>
     <h1>Edit Profile</h1>
 
     <form method="POST" action="{{ route('users.update', $user) }}">
@@ -34,4 +34,4 @@
     </form>
 
     <a href="{{ route('users.index') }}">Back to users</a>
-</x-dashboard-layout>
+</x-layout>

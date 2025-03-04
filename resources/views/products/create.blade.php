@@ -1,4 +1,4 @@
-<x-dashboard-layout>
+<x-layout>
     <section class="add-product">
         <h2>Add New Product</h2>
 
@@ -25,4 +25,4 @@
             <a href="{{ route('products.index') }}" class="back-btn">Back to Products</a>
         </form>
     </section>
-</x-dashboard-layout>
+</x-layout>

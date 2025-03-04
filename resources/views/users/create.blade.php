@@ -1,4 +1,4 @@
-<x-dashboard-layout>
+<x-layout>
 
     <h2>Create New User</h2>
     <p>Fill out the form below to add a new team member.</p>
@@ -49,4 +49,4 @@
 
     <a href="{{ route('users.index') }}" class="back-link">Back to Users</a>
 
-</x-dashboard-layout>
+</x-layout>
