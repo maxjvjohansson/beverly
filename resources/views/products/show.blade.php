@@ -8,7 +8,9 @@
         <p><strong>Price:</strong> ${{ $product->price }}</p>
 
         <div class="actions">
-            <a href="{{ route('products.edit', $product->id) }}" class="edit-btn">Edit</a>
+            <button class="edit" type="button" onclick="window.location.href='{{ route('products.edit', $product->id) }}'">
+                Edit
+            </button>
 
             @can('delete', $product)
                 <form action="{{ route('products.destroy', $product) }}" method="POST" style="display: inline;">

@@ -13,7 +13,9 @@
                 <p>Manage users and roles</p>
             </div>
             @can('manage-users')
-                <a href="{{ route('users.create') }}" class="add-user-btn">+ Add User</a>
+            <button class="add-btn" type="button" onclick="window.location.href='{{ route('users.create') }}'">
+                <span class="icon">+</span> Add User
+            </button>
             @endcan
         </div>
 
@@ -52,7 +54,9 @@
                             </td>
                             @can('manage-users')
                                 <td>
-                                    <a href="{{ route('users.edit', $user) }}" class="edit">Edit</a>
+                                    <button class="edit" type="button" onclick="window.location.href='{{ route('users.edit', $user->id) }}'">
+                                        Edit
+                                    </button>
                                     <form action="{{ route('users.destroy', $user) }}" method="POST" style="display: inline;">
                                         @csrf
                                         @method('DELETE')
