@@ -6,9 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beverly</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/products.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/categories.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/users.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
-<body>
+<body @if(auth()->check())class="logged-in"@endif>
+
+    @if(auth()->check())
+    <x-navbar />
+    @endif
+
+    <main>
     {{ $slot }}
+    </main>
+
 </body>
 </html>

@@ -5,36 +5,63 @@
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: start;
     align-items: center;
     margin-bottom: 1rem;
 }
-
-/* Table */
-.category-table {
-    width: 100%;
-    background-color: #FFFFFF;
-    border-collapse: collapse;
+.header h2 {
+    grid-row: 1;
+}
+.header p {
+    grid-row: 2;
+}
+.header button {
+    grid-row: 2;
 }
 
-.category-table th, .category-table td {
-    border: 1px solid #E5E7EB;
-    padding: 0.5rem;
-    text-align: left;
-}
-
-.category-table th {
-    color: black;
-    background-color: #E5E7Eb;
-}
 
 /* Actions */
+.table form {
+    display: inline-block;
+}
 .edit, .delete {
-    text-decoration: none;
     margin-right: 1rem;
 }
 
 .edit:hover, .delete:hover {
-    text-decoration: underline;
+    background: plum;
+}
+
+
+.table, .categories article {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border-radius: 0 0 .8rem .8rem;
+    border: none;
+    border-collapse: collapse;
+    padding-bottom: 2rem;
+}
+.table th, .table td {
+    padding: .6rem 1.2rem;
+}
+.table th {
+    background: whitesmoke;
+}
+.table td {
+    border-top: 1px solid #E5E7EB;
+}
+.table tr:last-child td {
+    padding-bottom: 1rem;
+}
+.table tr td span.category-id  {
+    display: inline-block;
+    background: #f5f5f5;
+    color: #aaa;
+    padding: .6rem;
+    min-width: 2.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
 }
