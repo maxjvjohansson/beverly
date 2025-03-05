@@ -85,7 +85,8 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'category_id' => 'required|exists:categories,id',
-            'price' => 'required|numeric|min:0'
+            'price' => 'required|numeric|min:0',
+            'img_url' => 'nullable|string|url'
         ]);
 
         Product::create($validated);
@@ -117,9 +118,10 @@ class ProductController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'description' => 'required|string',  // Vi vill att description ska vara required
+            'description' => 'required|string',
             'category_id' => 'required|exists:categories,id',
-            'price' => 'required|numeric|min:0'
+            'price' => 'required|numeric|min:0',
+            'img_url' => 'nullable|string|url'
         ]);
 
         $product->update($validated);

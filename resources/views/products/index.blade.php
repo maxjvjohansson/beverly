@@ -101,6 +101,10 @@
                         <td>{{ $product->id }}</td>
                         <td>
                             <div class="product-info">
+                                <img src="{{ $product->img_url ?? asset('icons/drink.svg') }}"
+                                    alt="{{ $product->name }}"
+                                    onerror="this.onerror=null;this.src='{{ asset('icons/drink.svg') }}';">
+
                                 <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a>
                             </div>
                         </td>

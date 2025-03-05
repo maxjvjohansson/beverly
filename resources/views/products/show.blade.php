@@ -3,6 +3,10 @@
     <section class="product-details">
         <h2>{{ $product->name }}</h2>
 
+        <img src="{{ $product->img_url ?? asset('images/fallback-drink.svg') }}"
+        alt="{{ $product->name }}"
+        onerror="this.onerror=null;this.src='{{ asset('images/fallback-drink.svg') }}';">
+
         <p><strong>Description:</strong> {{ $product->description }}</p>
         <p><strong>Category:</strong> {{ $product->category->name ?? 'N/A' }}</p>
         <p><strong>Price:</strong> ${{ $product->price }}</p>
