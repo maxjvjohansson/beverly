@@ -27,6 +27,16 @@
                     <tr>
                         <th>
                             <a href="{{ route('users.index', [
+                                'sort_by' => 'id', 
+                                'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc'
+                            ]) }}">
+                            ID
+                            @if ($sortBy == 'id')
+                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            @endif
+                        </th>
+                        <th>
+                            <a href="{{ route('users.index', [
                                 'sort_by' => 'name', 
                                 'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc'
                             ]) }}">
@@ -63,6 +73,7 @@
                 <tbody>
                     @foreach ($users as $user)
                         <tr>
+                            <td>{{ $user->id }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>

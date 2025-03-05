@@ -19,7 +19,7 @@ class UserController extends Controller
         $users = User::query();
 
         // Kontrollera om sortBy är en giltig kolumn
-        if (in_array($sortBy, ['name', 'email', 'role'])) {
+        if (in_array($sortBy, ['id', 'name', 'email', 'role'])) {
             $users->orderBy($sortBy, $sortOrder);
         }
 
