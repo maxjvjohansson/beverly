@@ -44,10 +44,54 @@
             <table class="product-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Product</th>
-                        <th>Category</th>
-                        <th>Price</th>
+                        <th>
+                            <a href="{{ route('products.index', [
+                                'sort_by' => 'id', 
+                                'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc',
+                                'search' => request()->input('search'),
+                                'category' => request()->input('category')
+                            ]) }}">
+                            ID
+                            @if ($sortBy == 'id')
+                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            @endif
+                        </th>
+                        <th>
+                            <a href="{{ route('products.index', [
+                                'sort_by' => 'name', 
+                                'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc',
+                                'search' => request()->input('search'),
+                                'category' => request()->input('category')
+                            ]) }}">
+                            Name
+                            @if ($sortBy == 'name')
+                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            @endif
+                        </th>
+                        <th>
+                            <a href="{{ route('products.index', [
+                                'sort_by' => 'category', 
+                                'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc',
+                                'search' => request()->input('search'),
+                                'category' => request()->input('category')
+                            ]) }}">
+                            Category
+                            @if ($sortBy == 'category')
+                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            @endif
+                        </th>
+                        <th>
+                            <a href="{{ route('products.index', [
+                                'sort_by' => 'price', 
+                                'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc',
+                                'search' => request()->input('search'),
+                                'category' => request()->input('category')
+                            ]) }}">
+                            Price
+                            @if ($sortBy == 'price')
+                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            @endif
+                        </th>
                         <th>Actions</th>
                     </tr>
                 </thead>

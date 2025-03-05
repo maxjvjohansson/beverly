@@ -10,11 +10,23 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $categories = Category::all();
-        return view('categories.index', compact('categories'));
+        $sortBy = $request->get('sort_by', 'id');  // Standard sortering: ID
+        $sortOrder = $request->get('sort_order', 'asc');  // Standard ordning: asc
+
+        $categories = Category::query();
+
+        // Sortering enligt sortBy och sortOrder
+        if (in_array($sortBy, ['id', 'name', 'description'])) {
+            $categories->orderBy($sortBy, $sortOrder);
+        }
+
+        $categories = $categories->paginate(10);
+
+        return view('categories.index', compact('categories', 'sortBy', 'sortOrder'));
     }
+
 
     /**
      * Show the form for creating a new resource.

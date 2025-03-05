@@ -9,10 +9,23 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::all();
-        return view('users.index', compact('users'));
+        // Hämta sorteringsparametrar från förfrågan
+        $sortBy = $request->get('sort_by', 'id');  // Standard sortering: ID
+        $sortOrder = $request->get('sort_order', 'asc');  // Standard ordning: asc
+
+        // Hämtar användare och tillämpar sortering om det behövs
+        $users = User::query();
+
+        // Kontrollera om sortBy är en giltig kolumn
+        if (in_array($sortBy, ['name', 'email', 'role'])) {
+            $users->orderBy($sortBy, $sortOrder);
+        }
+
+        $users = $users->paginate(10);
+
+        return view('users.index', compact('users', 'sortBy', 'sortOrder'));
     }
 
     public function create()

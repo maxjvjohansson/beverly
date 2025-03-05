@@ -22,8 +22,26 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
+                    <th>
+                        <a href="{{ route('categories.index', [
+                            'sort_by' => 'id', 
+                            'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc'
+                        ]) }}">
+                        ID
+                        @if ($sortBy == 'id')
+                            <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                        @endif
+                    </th>
+                    <th>
+                        <a href="{{ route('categories.index', [
+                            'sort_by' => 'name', 
+                            'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc'
+                        ]) }}">
+                        Name
+                        @if ($sortBy == 'name')
+                            <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                        @endif
+                    </th>
                     <th>Description</th>
                     <th>Actions</th>
                 </tr>
@@ -55,6 +73,10 @@
             </tbody>
         </table>
         @endif
+
+        <div class="pagination">
+            {{ $categories->appends(request()->query())->links() }}
+        </div>
 
     </section><!-- categories -->
 

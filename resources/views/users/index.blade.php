@@ -25,9 +25,36 @@
             <table class="user-table">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
+                        <th>
+                            <a href="{{ route('users.index', [
+                                'sort_by' => 'name', 
+                                'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc'
+                            ]) }}">
+                            Name
+                            @if ($sortBy == 'name')
+                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            @endif
+                        </th>
+                        <th>
+                            <a href="{{ route('users.index', [
+                                'sort_by' => 'email', 
+                                'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc'
+                            ]) }}">
+                            Email
+                            @if ($sortBy == 'email')
+                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            @endif
+                        </th>
+                        <th>
+                            <a href="{{ route('users.index', [
+                                'sort_by' => 'role', 
+                                'sort_order' => $sortOrder == 'asc' ? 'desc' : 'asc'
+                            ]) }}">
+                            Role
+                            @if ($sortBy == 'role')
+                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            @endif
+                        </th>
                         @can('manage-users')
                             <th>Actions</th>
                         @endcan
@@ -71,6 +98,11 @@
                 </tbody>
             </table>
         @endif
+
+        <div class="pagination">
+            {{ $users->appends(request()->query())->links() }}
+        </div>
+
     </section>
 
 </x-layout>
