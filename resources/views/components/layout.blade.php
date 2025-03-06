@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/categories.css') }}">
     <link rel="stylesheet" href="{{ asset('css/users.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/icons.css') }}">
 </head>
 <body @if(auth()->check())class="logged-in"@endif>
 

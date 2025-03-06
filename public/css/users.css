@@ -10,31 +10,3 @@
     align-items: center;
     margin-bottom: 1rem;
 }
-
-/* Table */
-.user-table {
-    width: 100%;
-    background-color: #FFFFFF;
-    border-collapse: collapse;
-}
-
-.user-table th, .user-table td {
-    border: 1px solid #E5E7EB;
-    padding: 0.5rem;
-    text-align: left;
-}
-
-.user-table th {
-    color: black;
-    background-color: #E5E7Eb;
-}
-
-/* Actions */
-.edit, .delete {
-    text-decoration: none;
-    margin-right: 1rem;
-}
-
-.edit:hover, .delete:hover {
-    text-decoration: underline;
-}

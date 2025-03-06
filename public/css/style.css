@@ -1,4 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
+}
+
+body {
+    font: normal 1rem 'albert sans', sans-serif;
+}
+
+input, select, button {
+    font: inherit;
+}
+
+a {
+    color: inherit;
 }
