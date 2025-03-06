@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-
     public function index(Request $request)
     {
         // Hämta sorteringsparametrar från förfrågan
@@ -37,19 +36,19 @@ class UserController extends Controller
     {
         $request->validate(
             [
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:3|confirmed',
-            'role' => 'required|in:admin,employee',
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|unique:users',
+                'password' => 'required|min:3|confirmed',
+                'role' => 'required|in:admin,employee',
             ]
         );
 
         User::create(
             [
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'role' => $request->role,
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => bcrypt($request->password),
+                'role' => $request->role,
             ]
         );
 
@@ -75,7 +74,11 @@ class UserController extends Controller
             }
         }
 
-        if ($request->filled('current_password') || $request->filled('password') || $request->filled('password_confirmation')) {
+        if (
+            $request->filled('current_password')
+            || $request->filled('password')
+            || $request->filled('password_confirmation')
+        ) {
             $rules['current_password'] = 'required';
             $rules['password'] = 'required|min:3|confirmed';
         }
@@ -109,13 +112,13 @@ class UserController extends Controller
 
         $request->validate(
             [
-            'role' => 'required|in:admin,employee',
+                'role' => 'required|in:admin,employee',
             ]
         );
 
         $user->update(
             [
-            'role' => $request->role,
+                'role' => $request->role,
             ]
         );
 

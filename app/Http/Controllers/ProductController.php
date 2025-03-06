@@ -31,7 +31,8 @@ class ProductController extends Controller
                     $query->where('products.name', 'like', '%' . $search . '%')
                         ->orWhere('products.price', 'like', '%' . $search . '%')
                         ->orWhereHas(
-                            'category', function ($query) use ($search) {
+                            'category',
+                            function ($query) use ($search) {
                                 $query->where('name', 'like', '%' . $search . '%');
                             }
                         );
@@ -86,11 +87,11 @@ class ProductController extends Controller
     {
         $validated = $request->validate(
             [
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'category_id' => 'required|exists:categories,id',
-            'price' => 'required|numeric|min:0',
-            'img_url' => 'nullable|string|url'
+                'name' => 'required|string|max:255',
+                'description' => 'required|string',
+                'category_id' => 'required|exists:categories,id',
+                'price' => 'required|numeric|min:0',
+                'img_url' => 'nullable|string|url'
             ]
         );
 
@@ -123,11 +124,11 @@ class ProductController extends Controller
     {
         $validated = $request->validate(
             [
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'category_id' => 'required|exists:categories,id',
-            'price' => 'required|numeric|min:0',
-            'img_url' => 'nullable|string|url'
+                'name' => 'required|string|max:255',
+                'description' => 'required|string',
+                'category_id' => 'required|exists:categories,id',
+                'price' => 'required|numeric|min:0',
+                'img_url' => 'nullable|string|url'
             ]
         );
 
