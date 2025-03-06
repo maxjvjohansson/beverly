@@ -1,0 +1,36 @@
+/* pagination */
+
+.pagination {
+    padding:  1.2rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 .8rem .8rem;
+}
+.pagination p {
+    color: #a4a7ac;
+    font-weight: 500;
+}
+
+.pages a {
+    display: inline-block;
+    border: .1rem solid #E5E7EB;
+    padding: .5rem .8rem;
+    border-radius: .2rem;
+    text-decoration: none;
+}
+a:hover:not(.disabled):not(.active) {
+    background: #E5E7EB;
+}
+a.active {
+    background: #bb389d;
+    border-color: #bb389d;
+    color: white;
+}
+.pages a img {
+    max-height: 1rem;
+    display: inline;
+    position: relative;
+    top: .18rem;
+}

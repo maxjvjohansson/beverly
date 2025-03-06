@@ -12,12 +12,11 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
-        $sortBy = $request->get('sort_by', 'id');  // Standard sortering: ID
-        $sortOrder = $request->get('sort_order', 'asc');  // Standard ordning: asc
+        $sortBy = $request->get('sort_by', 'id');
+        $sortOrder = $request->get('sort_order', 'asc');
 
         $categories = Category::query();
 
-        // Sortering enligt sortBy och sortOrder
         if (in_array($sortBy, ['id', 'name', 'description'])) {
             $categories->orderBy($sortBy, $sortOrder);
         }
@@ -26,6 +25,7 @@ class CategoryController extends Controller
 
         return view('categories.index', compact('categories', 'sortBy', 'sortOrder'));
     }
+
 
 
     /**
