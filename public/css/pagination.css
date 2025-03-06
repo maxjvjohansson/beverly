@@ -20,7 +20,7 @@
     border-radius: .2rem;
     text-decoration: none;
 }
-a:hover:not(.disabled):not(.active) {
+.pages a:hover:not(.disabled):not(.active) {
     background: #E5E7EB;
 }
 a.active {
