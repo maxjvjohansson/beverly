@@ -8,10 +8,8 @@
 
     <section class="products">
         <div class="header">
-            <div>
-                <h2>Products</h2>
-                <p>Manage your beverage products</p>
-            </div>
+            <h2>Products</h2>
+            <p>Manage your beverage products</p>
             <button class="add-btn" type="button" onclick="window.location.href='{{ route('products.create') }}'">
                 Add Product
             </button>
@@ -53,7 +51,7 @@
                             ]) }}">
                             ID
                             @if ($sortBy == 'id')
-                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
                         <th>
@@ -65,9 +63,10 @@
                             ]) }}">
                             Name
                             @if ($sortBy == 'name')
-                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
+                        <th>Image</th>
                         <th>
                             <a href="{{ route('products.index', [
                                 'sort_by' => 'category', 
@@ -77,7 +76,7 @@
                             ]) }}">
                             Category
                             @if ($sortBy == 'category')
-                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
                         <th>
@@ -89,7 +88,7 @@
                             ]) }}">
                             Price
                             @if ($sortBy == 'price')
-                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
                         <th>Actions</th>
@@ -98,15 +97,16 @@
                 <tbody>
                     @foreach($products as $product)
                     <tr>
-                        <td>{{ $product->id }}</td>
+                        <td><span class="id-number">{{ $product->id }}</span></td>
                         <td>
                             <div class="product-info">
-                                <img src="{{ $product->img_url ?? asset('icons/drink.svg') }}"
-                                    alt="{{ $product->name }}"
-                                    onerror="this.onerror=null;this.src='{{ asset('icons/drink.svg') }}';" style="width: 3rem; height: 3rem;">
-
                                 <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a>
                             </div>
+                        </td>
+                        <td>
+                            <img src="{{ $product->img_url ?? asset('icons/drink.svg') }}"
+                            alt="{{ $product->name }}"
+                            onerror="this.onerror=null;this.src='{{ asset('icons/drink.svg') }}';" style="width: 3rem; height: 3rem;">
                         </td>
                         <td>{{ $product->category->name ?? 'N/A' }}</td>
                         <td>${{ $product->price }}</td>

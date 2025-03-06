@@ -3,10 +3,3 @@
     height: 100%;
     padding: 3.2rem;
 }
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}

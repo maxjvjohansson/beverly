@@ -8,10 +8,8 @@
 
     <section class="users">
         <div class="header">
-            <div>
-                <h2>Team Members</h2>
-                <p>Manage users and roles</p>
-            </div>
+            <h2>Team Members</h2>
+            <p>Manage users and roles</p>
             @can('manage-users')
             <button class="add-btn" type="button" onclick="window.location.href='{{ route('users.create') }}'">
                 Add User
@@ -32,7 +30,7 @@
                             ]) }}">
                             ID
                             @if ($sortBy == 'id')
-                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
                         <th>
@@ -42,7 +40,7 @@
                             ]) }}">
                             Name
                             @if ($sortBy == 'name')
-                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
                         <th>
@@ -52,7 +50,7 @@
                             ]) }}">
                             Email
                             @if ($sortBy == 'email')
-                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
                         <th>
@@ -62,7 +60,7 @@
                             ]) }}">
                             Role
                             @if ($sortBy == 'role')
-                                <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                            <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
                         @can('manage-users')
@@ -73,7 +71,7 @@
                 <tbody>
                     @foreach ($users as $user)
                         <tr>
-                            <td>{{ $user->id }}</td>
+                            <td><span class="id-number">{{ $user->id }}</span></td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>

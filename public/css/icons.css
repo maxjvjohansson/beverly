@@ -46,3 +46,25 @@ button.add-btn {
     padding: 1rem 1.2rem 1rem 3.6rem;
 }
 
+/* sorting arrows */
+
+th {
+    align-items: center;
+    overflow: hidden;
+}
+.arrow {
+    display: inline-block;
+    background-size: 100% 120%;
+    background-position: center;
+    height: .9rem;
+    width: 1.2rem;
+    position: relative;
+    top: .1rem;
+}
+.arrow.arrow-down {
+    background-image: url(../icons/arrow_down.svg);
+}
+.arrow.arrow-up {
+    background-image: url(../icons/arrow_down.svg);
+    transform: rotate(180deg);
+}
