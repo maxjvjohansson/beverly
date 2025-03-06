@@ -24,6 +24,9 @@
             <label for="price">Price</label>
             <input type="number" id="price" name="price" value="{{ old('price', $product->price) }}" step="0.01" required>
 
+            <label>Image URL (optional)</label>
+            <input type="url" name="img_url" value="{{ old('img_url', $product->img_url) }}">
+
             <button type="submit">Save Changes</button>
             <a href="{{ route('products.index') }}" class="back-btn">Back to Products</a>
         </form>

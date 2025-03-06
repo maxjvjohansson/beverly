@@ -21,6 +21,9 @@
             <label for="price">Price</label>
             <input type="number" id="price" name="price" step="0.01" required>
 
+            <label>Image URL (optional)</label>
+            <input type="url" name="img_url" value="{{ old('img_url') }}">
+
             <button type="submit">Add Product</button>
             <a href="{{ route('products.index') }}" class="back-btn">Back to Products</a>
         </form>
