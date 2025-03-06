@@ -12,7 +12,6 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-
     public function index(Request $request)
     {
         $search = $request->input('search');
@@ -27,13 +26,17 @@ class ProductController extends Controller
 
         // search multiple criterias
         if ($search) {
-            $query->where(function ($query) use ($search) {
-                $query->where('products.name', 'like', '%' . $search . '%')
-                    ->orWhere('products.price', 'like', '%' . $search . '%')
-                    ->orWhereHas('category', function ($query) use ($search) {
-                        $query->where('name', 'like', '%' . $search . '%');
-                    });
-            });
+            $query->where(
+                function ($query) use ($search) {
+                    $query->where('products.name', 'like', '%' . $search . '%')
+                        ->orWhere('products.price', 'like', '%' . $search . '%')
+                        ->orWhereHas(
+                            'category', function ($query) use ($search) {
+                                $query->where('name', 'like', '%' . $search . '%');
+                            }
+                        );
+                }
+            );
         }
 
         // filter by category
@@ -81,13 +84,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $validated = $request->validate(
+            [
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'category_id' => 'required|exists:categories,id',
             'price' => 'required|numeric|min:0',
             'img_url' => 'nullable|string|url'
-        ]);
+            ]
+        );
 
         Product::create($validated);
 
@@ -116,13 +121,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $validated = $request->validate([
+        $validated = $request->validate(
+            [
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'category_id' => 'required|exists:categories,id',
             'price' => 'required|numeric|min:0',
             'img_url' => 'nullable|string|url'
-        ]);
+            ]
+        );
 
         $product->update($validated);
 

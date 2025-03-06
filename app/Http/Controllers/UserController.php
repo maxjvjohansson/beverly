@@ -35,19 +35,23 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $request->validate(
+            [
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:3|confirmed',
             'role' => 'required|in:admin,employee',
-        ]);
+            ]
+        );
 
-        User::create([
+        User::create(
+            [
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'role' => $request->role,
-        ]);
+            ]
+        );
 
         return redirect()->route('users.index')->with('success', 'User created successfully.');
     }
@@ -103,13 +107,17 @@ class UserController extends Controller
             return redirect()->route('users.index')->with('error', 'You do not have permission to change user roles.');
         }
 
-        $request->validate([
+        $request->validate(
+            [
             'role' => 'required|in:admin,employee',
-        ]);
+            ]
+        );
 
-        $user->update([
+        $user->update(
+            [
             'role' => $request->role,
-        ]);
+            ]
+        );
 
         return redirect()->route('users.index')->with('success', 'User role updated successfully.');
     }
