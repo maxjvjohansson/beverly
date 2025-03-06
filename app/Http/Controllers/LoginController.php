@@ -12,17 +12,21 @@ class LoginController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $credentials = $request->validate([
+        $credentials = $request->validate(
+            [
             'email' => ['required', 'email'],
             'password' => ['required'],
-        ]);
+            ]
+        );
 
         if (Auth::attempt($credentials)) {
             return redirect('/dashboard');
         }
 
-        return back()->withErrors([
+        return back()->withErrors(
+            [
             'login' => 'Invalid credentials. Please try again.',
-        ])->withInput();
+            ]
+        )->withInput();
     }
 }

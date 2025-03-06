@@ -9,8 +9,11 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    /**
+     * @use HasFactory<\Database\Factories\UserFactory>
+     */
+    use HasFactory;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
