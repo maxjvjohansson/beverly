@@ -30,11 +30,10 @@ table, .categories article {
     width: 100%;
     text-align: left;
     background: #fff;
-    border-radius: 0 0 .8rem .8rem;
     border: none;
     border-collapse: collapse;
-    padding-bottom: 2rem;
     box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .05);
+    margin-bottom: -1rem;
 }
 th, td {
     padding: .6rem 1.2rem;
@@ -46,8 +45,8 @@ th {
 th a {
     text-decoration: none;
 }
-td {
-    border-top: 1px solid #E5E7EB;
+th, td {
+    border-bottom: 1px solid #E5E7EB;
 }
 tr:last-child td {
     padding-bottom: 1rem;

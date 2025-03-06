@@ -131,7 +131,9 @@
         @endif
 
         <div class="pagination">
-            {{ $products->appends(request()->query())->links() }}
+            <p>Showing {{ $products->firstItem() }} to {{ $products->lastItem() }} of {{ $products->total() }} products</p>
+
+            {{ $products->appends(request()->query())->links('vendor.pagination.default') }}
         </div>
         
     </section>

@@ -75,7 +75,9 @@
         @endif
 
         <div class="pagination">
-            {{ $categories->appends(request()->query())->links() }}
+            <p>Showing {{ $categories->firstItem() }} to {{ $categories->lastItem() }} of {{ $categories->total() }} categories</p>
+
+            {{ $categories->appends(request()->query())->links('vendor.pagination.default') }}
         </div>
 
     </section><!-- categories -->
