@@ -1,0 +1,48 @@
+/* buttons edit and delete */
+
+button.edit,
+button.delete-btn {
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: .4rem .8rem .4rem 2rem;
+    margin-right: .4rem;
+    border: 0px solid #eee;
+    border-radius: .4rem;
+    font-size: .9em;
+}
+button.delete-btn {
+    background-color: rgb(250, 230, 228);
+    background-image: url(../icons/trash.svg);
+    background-size: 35% 70%;
+    color: salmon;
+}
+button.edit {
+    background-color: #fff1cf;
+    background-image: url(../icons/edit.svg);
+    background-size: 40% 70%;
+    color: #d89b01;
+}
+button.edit:hover, 
+button.delete-btn:hover {
+    filter: saturate(5);
+}
+
+/* button add new */
+
+button.add-btn {
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-right: .4rem;
+    border: 0px solid #eee;
+    border-radius: .4rem;
+    background-image: url(../icons/plus-white.svg);
+    background-size: 30% 70%;
+    background-color: rgb(187, 56, 157);
+    padding: 1rem 1.2rem 1rem 3.6rem;
+}
+

@@ -4,22 +4,7 @@
     padding: 3.2rem;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
 
-.add-btn {
-    color: white;
-    background-color: plum;
-    text-decoration: none;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
 
 /* Add Product Section */
 .add-product {
@@ -45,33 +30,7 @@ textarea {
     border-radius: 0.25rem;
 }
 
-/* Table */
-.product-table {
-    width: 100%;
-    background-color: #FFFFFF;
-    border-collapse: collapse;
-}
 
-.product-table th, .product-table td {
-    border: 1px solid #E5E7EB;
-    padding: 0.5rem;
-    text-align: left;
-}
-
-.product-table th {
-    color: black;
-    background-color: #E5E7Eb;
-}
-
-/* Actions */
-.edit, .delete {
-    text-decoration: none;
-    margin-right: 1rem;
-}
-
-.edit:hover, .delete:hover {
-    text-decoration: underline;
-}
 
 /* Pagination */
 .pagination {

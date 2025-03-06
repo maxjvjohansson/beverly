@@ -1,7 +1,6 @@
 #login-form {
     background: plum;
     color: white;
-    font: normal 1.2rem sans-serif;
     max-width: 32rem;
     margin: 0 auto;
     padding: 3.2rem;
@@ -12,7 +11,8 @@
     text-align: center;
 }
 #login-form h2 {
-    font: bold 2.4rem sans-serif;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
 }
 #login-form input,
 #login-form button {
@@ -24,6 +24,19 @@
 }
 #login-form input::placeholder {
     color: white;
+}
+#login-form input {
+    background-color: plum; 
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+#login-form input[name=email] {
+    background-image: url(../icons/user-white.svg);
+    background-size: 18% 70%;
+}
+#login-form input[name=password] {
+    background-image: url(../icons/lock-white.svg);
+    background-size: 18% 60%;
 }
 #login-form button {
     background: white;
