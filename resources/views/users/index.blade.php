@@ -14,7 +14,7 @@
             </div>
             @can('manage-users')
             <button class="add-btn" type="button" onclick="window.location.href='{{ route('users.create') }}'">
-                <span class="icon">+</span> Add User
+                Add User
             </button>
             @endcan
         </div>

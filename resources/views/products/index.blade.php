@@ -13,8 +13,8 @@
                 <p>Manage your beverage products</p>
             </div>
             <button class="add-btn" type="button" onclick="window.location.href='{{ route('products.create') }}'">
-                <span class="icon">+</span> Add Product
-            </button> <!-- Change the + to an icon instead -->
+                Add Product
+            </button>
         </div>
         
         <form action="{{ route('products.index') }}" method="GET" id="filter" class="filter-bar">
