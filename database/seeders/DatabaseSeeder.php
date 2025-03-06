@@ -98,118 +98,132 @@ class DatabaseSeeder extends Seeder
                 'img_url' => 'https://kaffekapslen.media/media/catalog/product/cache/e986fbef946fb9a322845c09204f8de5/l/a/lavazza-malet-qualita-oro-250g-01.jpg'
             ],
             [
-                'name' => 'Nespresso Pods',
-                'description' => 'Nespresso compatible coffee pods.',
+                'name' => 'Senseo Classic',
+                'description' => '36pcs. Coffee pads for Senseo.',
                 'price' => 14.99,
                 'category' => 'Coffee',
-                'img_url' => 'https://www.nespresso.com/ecom/medias/sys_master/public/11656694722590.png'
+                'img_url' => 'https://kaffekapslen.media/media/catalog/product/cache/e986fbef946fb9a322845c09204f8de5/s/e/senseo-36-classic-0001.jpg'
             ],
             [
-                'name' => 'Starbucks Blonde Roast',
-                'description' => 'Whole bean coffee with smooth flavor.',
-                'price' => 11.49,
+                'name' => 'Starbucks Blonde Espresso Roast',
+                'description' => '450g. Whole bean coffee with smooth flavor.',
+                'price' => 16.49,
                 'category' => 'Coffee',
-                'img_url' => 'https://www.starbucksathome.com/nl/sites/default/files/2023-02/Product%20Shot%20-%20Blonde%20Espresso%20Roast%20-%20Ground%20-%20200g.png'
+                'img_url' => 'https://media.power-cdn.net/images/h-b218a6aab6c6e4e9f1871ad835c4d747/products/2097703/2097703_3_1200x1200_w_g.jpg'
             ],
 
             // Tea
             [
                 'name' => 'Twinings Earl Grey',
-                'description' => 'Classic Earl Grey black tea bags.',
+                'description' => '25pcs. Classic Earl Grey black tea bags.',
                 'price' => 5.99,
                 'category' => 'Tea',
-                'img_url' => 'https://www.twiningsusa.com/cdn/shop/products/EarlGreyBox.png'
+                'img_url' => 'https://www.twinings.se/content/images/products/F12002-earl-grey-25p.jpg'
             ],
             [
                 'name' => 'Yogi Green Tea',
-                'description' => 'Organic green tea with lemon and ginger.',
+                'description' => '17pcs. Organic green tea with lemon and ginger.',
                 'price' => 4.79,
                 'category' => 'Tea',
-                'img_url' => 'https://www.yogiproducts.com/images/uploads/products/gtlemon.png'
+                'img_url' => 'https://kaffekapslen.media/media/catalog/product/cache/e986fbef946fb9a322845c09204f8de5/y/o/yogi-tea-green-tea-ginger-lemon-0013.jpg'
             ],
 
             // Juice
             [
                 'name' => 'Tropicana Orange Juice',
-                'description' => '100% pure squeezed orange juice.',
+                'description' => '900ml. 100% pure squeezed orange juice.',
                 'price' => 3.49,
                 'category' => 'Juice',
-                'img_url' => 'https://images.ctfassets.net/oggad6svuzkv/4QyEXUbSWhvCvCYo2sQGMY/41dc7d2c7333390c74c9de93777c515a/100-ORANGE-JUICE-52oz.png'
+                'img_url' => 'https://res.cloudinary.com/coopsverige/image/upload/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_660,w_660/v1729152195/cloud/394664.jpg'
             ],
             [
                 'name' => 'V8 Vegetable Juice',
-                'description' => 'Healthy blend of vegetable juices.',
+                'description' => '1.4l. Healthy blend of vegetable juices.',
                 'price' => 4.29,
                 'category' => 'Juice',
-                'img_url' => 'https://images.albertsons-media.com/is/image/ABS/108110076?$ng-ecom-pdp-mobile$&defaultImage=Not_Available'
+                'img_url' => 'https://images.albertsons-media.com/is/image/ABS/960208917-ECOM?$ng-ecom-pdp-mobile$&defaultImage=Not_Available'
             ],
 
             // Soda
             [
                 'name' => 'Coca Cola',
-                'description' => 'Classic 330ml Coca Cola can.',
+                'description' => '330ml. Classic Coca Cola can.',
                 'price' => 1.49,
                 'category' => 'Soda',
-                'img_url' => 'https://www.coca-cola.com/content/dam/one/central/gb/en/homepage-hero-desktop.png'
+                'img_url' => 'https://outofhome.se/media/catalog/product/cache/30/image/17f82f742ffe127f42dca9de82fb58b1/9/0/90042529_cocacola_original_burk.jpg'
+            ],
+            [
+                'name' => 'Coca Cola Zero',
+                'description' => '330ml. Coca Cola Zero can.',
+                'price' => 1.49,
+                'category' => 'Soda',
+                'img_url' => 'https://outofhome.se/media/catalog/product/cache/30/image/17f82f742ffe127f42dca9de82fb58b1/9/0/90042989_cocacola_zero_sugar_burk.jpg'
             ],
             [
                 'name' => 'Pepsi',
-                'description' => 'Refreshing Pepsi can.',
+                'description' => '330ml. Refreshing Pepsi can.',
                 'price' => 1.39,
                 'category' => 'Soda',
-                'img_url' => 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Pepsi_can_logo.svg'
+                'img_url' => 'https://images.swedoffice.se/products/large/45251.jpg'
+            ],
+            [
+                'name' => 'Pepsi Max',
+                'description' => '330ml. Refreshing Pepsi Max can.',
+                'price' => 1.39,
+                'category' => 'Soda',
+                'img_url' => 'https://outofhome.se/media/catalog/product/cache/30/image/17f82f742ffe127f42dca9de82fb58b1/2/6/26568_pepsi_max_33cl_can_sleek_1.jpg'
             ],
 
             // Energy Drink
             [
                 'name' => 'Red Bull',
-                'description' => 'Gives you wings.',
-                'price' => 2.49,
+                'description' => '250ml. Gives you wings.',
+                'price' => 1.49,
                 'category' => 'Energy Drink',
-                'img_url' => 'https://upload.wikimedia.org/wikipedia/en/f/f3/RedBullCan150ml.png'
+                'img_url' => 'https://cdn.barlife.dk/media/catalog/product/6/5/65009-ac38c9823fc741c0edcce9631c261e92.jpg?store=default&image-type=image'
             ],
             [
                 'name' => 'Monster Energy',
-                'description' => 'The classic energy drink.',
+                'description' => '50cl. The classic energy drink.',
                 'price' => 2.29,
                 'category' => 'Energy Drink',
-                'img_url' => 'https://m.media-amazon.com/images/I/61MkU+DiXLL._AC_SL1500_.jpg'
+                'img_url' => 'https://www.buttericks.se/cdn-cgi/image/quality=90,format=auto/https://www.buttericks.se/media/catalog/product/1/0/105060-energidryck-monster-energy-gron-50-cl.jpg?store=se&image-type=image'
             ],
 
             // Sports Drink
             [
                 'name' => 'Gatorade Lemon Lime',
-                'description' => 'Electrolyte sports drink.',
+                'description' => '50cl. Electrolyte sports drink.',
                 'price' => 1.99,
                 'category' => 'Sports Drink',
-                'img_url' => 'https://images.albertsons-media.com/is/image/ABS/120380011?$ng-ecom-pdp-desktop$&defaultImage=Not_Available'
+                'img_url' => 'https://www.cooperscandy.com/resource/u4DN/dvg/Nkt3vYMgafO/prod/91997-2025.jpg'
             ],
 
             // Water
             [
                 'name' => 'Evian Natural Spring Water',
-                'description' => 'Refreshing natural spring water.',
+                'description' => '50cl. Refreshing natural spring water.',
                 'price' => 1.69,
                 'category' => 'Water',
-                'img_url' => 'https://www.evian.com/media/349/files/productpackshot/classic-range/evian-500ml-natural-mineral-water.png'
+                'img_url' => 'https://m.media-amazon.com/images/I/51pxfK6d2YL.jpg'
             ],
 
             // Alcohol
             [
                 'name' => 'Heineken Beer',
-                'description' => 'Premium lager beer.',
-                'price' => 2.99,
+                'description' => '330ml. Premium lager beer.',
+                'price' => 1.99,
                 'category' => 'Alcohol',
-                'img_url' => 'https://www.heineken.com/media-eu/images/heineken-com/product/330ml.png'
+                'img_url' => 'https://www.dryckeslaget.com/tuotekuvat/800x800/missing_image-2.jpg'
             ],
 
             // Hot Chocolate
             [
                 'name' => 'Swiss Miss Hot Cocoa',
-                'description' => 'Rich hot chocolate with marshmallows.',
+                'description' => '8pcs. Rich hot chocolate with marshmallows.',
                 'price' => 3.99,
                 'category' => 'Hot Chocolate',
-                'img_url' => 'https://www.swissmiss.com/sites/swsm/files/2021-10/SwissMissMilkHotCocoa.jpg'
+                'img_url' => 'https://m.media-amazon.com/images/I/81ZqVUJO6xL.jpg'
             ],
         ];
 
