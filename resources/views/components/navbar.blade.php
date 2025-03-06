@@ -1,5 +1,6 @@
 <nav class="navbar">
     <section class="menu-heading">
+        <img src="./icons/logo_beverly.svg" alt="Beverly logotype" />
         <h2>Beverly</h2>
     </section>
 

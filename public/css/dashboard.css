@@ -19,8 +19,20 @@ main {
 }
 
 .menu-heading {
-    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: lowercase;
+    padding: 1rem 1.5rem 1rem 1rem;
     border-bottom: 1px solid #E5E7EB;
+}
+.menu-heading h2 {
+    font-size: 2rem;
+}
+.menu-heading img {
+    max-width: 2rem;
+    margin-left: 1rem;
 }
 
 .navbar ul {
