@@ -50,4 +50,5 @@ jobs:
           DB_USERNAME: user
           DB_PASSWORD: password
 
+      - run: composer install --prefer-dist --no-progress --no-suggest
       - run: vendor/bin/phpcs --standard=PSR12 --colors -n src tests
