@@ -37,7 +37,7 @@ body:not(.logged-in) main {
 }
 #login-form img {
     width: 6.4rem;
-    margin: -2rem auto 2rem;
+    margin: -1.2rem auto 2rem;
     aspect-ratio: 1;
     filter: drop-shadow(0 .1rem .3rem rgba(82, 0, 74, 0.2)); 
 }
