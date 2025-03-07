@@ -94,9 +94,13 @@ button.add-btn:hover {
 /* alert */
 
 .alert {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
     padding: 1.2rem;
     background-color: rgb(203, 230, 191);
-    color: rgb(23, 56, 9);
+    color: #173809;
     margin-bottom: 2rem;
     border-radius: .25rem;
 }

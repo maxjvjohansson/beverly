@@ -45,17 +45,26 @@ th a {
 th, td {
     border-bottom: 1px solid #E5E7EB;
 }
+tr:first-child {
+    border-radius: .4rem;
+}
+tr:first-child td {
+    padding-top: 1rem;
+}
 tr:last-child td {
     padding-bottom: 1rem;
 }
 tr td span.id-number  {
     display: inline-block;
-    background: #f9f9f9;
+    background: #f3f4f6;
     color: #aaa;
     padding: .6rem;
     min-width: 2.5rem;
     text-align: center;
     border-radius: .2rem;
+}
+tr:hover {
+    background-color: #f3f4f6;
 }
 
 /* id:s */
