@@ -27,12 +27,6 @@
                     </option>
                 @endforeach
             </select>
-        
-            <select name="price_order" onchange="this.form.submit()" id="sort">
-                <option value="">Sort by price</option>
-                <option value="asc" {{ request('price_order') == 'asc' ? 'selected' : '' }}>Lowest to Highest</option>
-                <option value="desc" {{ request('price_order') == 'desc' ? 'selected' : '' }}>Highest to Lowest</option>
-            </select>
 
         </form><!-- end filter -->
 
