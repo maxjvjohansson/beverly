@@ -25,3 +25,9 @@
         min-width: 10rem;
     }
 }
+
+.edit details label,
+.edit details input {
+    display: block;
+    margin: 1rem 0;
+}

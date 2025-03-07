@@ -12,14 +12,17 @@
             <label>Email</label>
             <input type="email" name="email" value="{{ old('email', $user->email) }}" required>
             
-            <label>Current Password</label>
-            <input type="password" name="current_password">
-            
-            <label>New Password</label>
-            <input type="password" name="password">
-            
-            <label>Confirm Password</label>
-            <input type="password" name="password_confirmation">
+            <details>
+                <summary>Change password</summary>
+                <label>Current Password</label>
+                <input type="password" name="current_password">
+                
+                <label>New Password</label>
+                <input type="password" name="password">
+                
+                <label>Confirm Password</label>
+                <input type="password" name="password_confirmation">
+            </details>
 
             <button type="submit" class="save">Save</button>
             <a href="{{ route('users.index') }}">Back to users</a>
