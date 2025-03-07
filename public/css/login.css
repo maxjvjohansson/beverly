@@ -1,18 +1,27 @@
 body:not(.logged-in) {
+    background-color: rgb(139, 40, 139);
+}
+body:not(.logged-in):after {
+    content: "";
     background: url(../img/bg.jpg) no-repeat bottom center;
     background-size: cover;
     min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    opacity: .8;
+    filter: contrast(1.2);
 }
 body:not(.logged-in) main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 80vh;
 }
 
 #login-form {
-    background: rgba(221, 160, 221, .2);
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(.8rem);
     color: white;
     width: 30rem;
     max-width: 90vw;
@@ -23,12 +32,12 @@ body:not(.logged-in) main {
     gap: 1.2rem;
     border-radius: 1rem;
     text-align: center;
-    border: .1rem solid rgba(254, 218, 254, 0.4);
-    box-shadow: 0 .1rem 1rem rgba(82, 0, 74, 0.4);
+    border: .2rem solid rgba(254, 218, 254, 0.5);
+    box-shadow: 0 .1rem 5rem rgba(82, 0, 74, 0.5);
 }
 #login-form img {
-    width: 9rem;
-    margin: -4rem auto 2rem;
+    width: 6.4rem;
+    margin: -2rem auto 2rem;
     aspect-ratio: 1;
     filter: drop-shadow(0 .1rem .3rem rgba(82, 0, 74, 0.2)); 
 }
@@ -62,8 +71,11 @@ body:not(.logged-in) main {
     background-size: 18% 60%;
 }
 #login-form button {
-    background: white;
+    background: rgba(254, 218, 254, 1);
     color: #a051a0;
+}
+#login-form button:hover {
+    background: white;
 }
 #login-form label {
     display: none;
