@@ -21,7 +21,7 @@
     text-decoration: none;
 }
 .pages a:hover:not(.disabled):not(.active) {
-    background: #E5E7EB;
+    background: #f3f4f6;
 }
 a.active {
     background: #bb389d;
