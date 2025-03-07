@@ -1,3 +1,22 @@
+/* header-section over tables */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.header h2 {
+    grid-row: 1;
+}
+.header p {
+    grid-row: 2;
+}
+.header button {
+    grid-row: 2;
+}
+
 /* tables */
 
 table form {
@@ -36,7 +55,7 @@ tr td span.id-number  {
     padding: .6rem;
     min-width: 2.5rem;
     text-align: center;
-    border-radius: 0.2rem;
+    border-radius: .2rem;
 }
 
 /* id:s */
@@ -62,7 +81,7 @@ table td:last-child {
     margin-bottom: 1.6rem;
 }
 .filter-bar input, .filter-bar select {
-    padding: 0.5rem;
+    padding: .5rem;
     border: 1px solid #E5E7EB;
-    border-radius: 0.25rem;
+    border-radius: .25rem;
 }

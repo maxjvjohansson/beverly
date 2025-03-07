@@ -1,5 +1,5 @@
 <x-layout>
-    <section class="edit-product">
+    <section class="edit">
         <h2>Edit Product</h2>
 
         <form action="{{ route('products.update', $product->id) }}" method="POST">
@@ -27,7 +27,7 @@
             <label>Image URL (optional)</label>
             <input type="url" name="img_url" value="{{ old('img_url', $product->img_url) }}">
 
-            <button type="submit">Save Changes</button>
+            <button type="submit" class="save">Save</button>
             <a href="{{ route('products.index') }}" class="back-btn">Back to Products</a>
         </form>
     </section>

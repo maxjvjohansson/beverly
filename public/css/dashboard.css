@@ -6,11 +6,11 @@ body.logged-in {
 
 main {
     min-height: 100vh;
+    padding: 3.2rem;
 }
 main > section {
     width: 100%;
     height: 100%;
-    padding: 3.2rem;
 }
 
 .navbar {

@@ -9,8 +9,18 @@ body {
     font: normal 1rem 'albert sans', sans-serif;
 }
 
-input, select, button {
+label {
+    font-weight: bold;
+}
+input, select, textarea, button {
     font: inherit;
+    padding: .5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: .25rem;
+}
+button {
+    background: #E5E7EB;
+    cursor: pointer;
 }
 
 a {

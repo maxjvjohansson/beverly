@@ -6,10 +6,8 @@
     </div>
     @endif
 
-    <section class="categories">
+    <section class="edit">
         <h2>Edit Category</h2>
-
-        <article>
 
         <form action="{{ route('categories.update', $category->id) }}" method="POST">
             @csrf
@@ -21,9 +19,9 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" required>{{ old('description', $category->description) }}</textarea>
 
-            <button type="submit">Save Changes</button>
+            <button type="submit" class="save">Save</button>
             <a href="{{ route('categories.index') }}" class="back-btn">Back to Categories</a>
         </form>
-        </article>
+        
     </section>
 </x-layout>
