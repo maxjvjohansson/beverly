@@ -14,8 +14,8 @@ class LoginController extends Controller
     {
         $credentials = $request->validate(
             [
-            'email' => ['required', 'email'],
-            'password' => ['required'],
+                'email' => ['required', 'email'],
+                'password' => ['required'],
             ]
         );
 
@@ -25,7 +25,7 @@ class LoginController extends Controller
 
         return back()->withErrors(
             [
-            'login' => 'Invalid credentials. Please try again.',
+                'login' => 'Invalid credentials. Please try again.',
             ]
         )->withInput();
     }
