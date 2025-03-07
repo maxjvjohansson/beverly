@@ -16,7 +16,6 @@ class ProductController extends Controller
     {
         $search = $request->input('search');
         $categoryId = $request->input('category');
-        $priceOrder = $request->input('price_order');
 
         $sortBy = $request->get('sort_by', 'id');
         $sortOrder = $request->get('sort_order', 'asc');
@@ -58,18 +57,10 @@ class ProductController extends Controller
             }
         }
 
-        // sort by price
-        if ($priceOrder) {
-            $query->orderBy('price', $priceOrder);
-        }
-
         $products = $query->select('products.*')->paginate(10);
 
         return view('products.index', compact('products', 'categories', 'sortBy', 'sortOrder'));
     }
-
-
-
 
     /**
      * Show the form for creating a new resource.
