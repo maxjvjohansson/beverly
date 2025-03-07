@@ -79,6 +79,11 @@ table td:last-child {
 table td img {
     background-color: white;
     border-radius: .4rem;
+    max-width: 2.4rem;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    display: block;
 }
 
 /* filter-bar */

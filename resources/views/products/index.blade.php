@@ -103,7 +103,7 @@
                         <td>
                             <img src="{{ $product->img_url ?? asset('icons/drink.svg') }}"
                             alt="{{ $product->name }}"
-                            onerror="this.onerror=null;this.src='{{ asset('icons/drink.svg') }}';" style="width: 3rem; height: 3rem;">
+                            onerror="this.onerror=null;this.src='{{ asset('icons/drink.svg') }}'">
                         </td>
                         <td>
                             <button class="edit" type="button" onclick="window.location.href='{{ route('products.edit', $product->id) }}'">
