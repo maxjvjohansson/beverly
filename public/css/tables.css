@@ -72,7 +72,7 @@ table td:last-child {
 
 #filter {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto;
     gap: 1rem;
     background: white;
     padding: 1.2rem;
