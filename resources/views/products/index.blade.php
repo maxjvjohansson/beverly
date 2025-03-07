@@ -61,7 +61,6 @@
                             <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
-                        <th>Image</th>
                         <th>
                             <a href="{{ route('products.index', [
                                 'sort_by' => 'category', 
@@ -86,6 +85,7 @@
                             <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
+                        <th>Image</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -98,13 +98,13 @@
                                 <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a>
                             </div>
                         </td>
+                        <td>{{ $product->category->name ?? 'N/A' }}</td>
+                        <td>${{ $product->price }}</td>
                         <td>
                             <img src="{{ $product->img_url ?? asset('icons/drink.svg') }}"
                             alt="{{ $product->name }}"
                             onerror="this.onerror=null;this.src='{{ asset('icons/drink.svg') }}';" style="width: 3rem; height: 3rem;">
                         </td>
-                        <td>{{ $product->category->name ?? 'N/A' }}</td>
-                        <td>${{ $product->price }}</td>
                         <td>
                             <button class="edit" type="button" onclick="window.location.href='{{ route('products.edit', $product->id) }}'">
                                 Edit

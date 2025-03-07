@@ -75,7 +75,11 @@ table td:first-child {
 table td:last-child {
     width: 14rem;
 }
-
+/* product images */
+table td img {
+    background-color: white;
+    border-radius: .4rem;
+}
 
 /* filter-bar */
 

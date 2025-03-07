@@ -88,7 +88,7 @@ button.add-btn:hover {
     padding-left: 2rem;
 }
 #logout-form button:hover {
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 /* alert */
