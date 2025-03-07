@@ -17,7 +17,7 @@ main > section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(90vh - (3.2rem * 2));
+    height: calc(80vh - (3.2rem * 2));
     text-align: center;
     gap: 1rem;
 }
@@ -30,11 +30,13 @@ main > section {
     background: url(../img/bg.jpg) no-repeat bottom center;
     background-size: cover;
     background-attachment: fixed;
-    opacity: .4;
-    filter: contrast(1.5);
+    opacity: .2;
+    filter: grayscale(1);
+    mix-blend-mode: hard-light;
 }
 .dashboard strong {
     font-weight: 900;
+    color:  rgb(187, 56, 157);
 }
 .dashboard p {
     font-style: italic;
