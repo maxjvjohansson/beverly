@@ -14,3 +14,14 @@
 .show h2 {
     margin-bottom: 1rem;
 }
+.show img {
+    max-width: 50%;
+    height: auto;
+}
+
+.edit form {
+    input, select, textarea {
+        width: 50vw;
+        min-width: 10rem;
+    }
+}

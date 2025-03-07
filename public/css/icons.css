@@ -1,7 +1,8 @@
 /* buttons edit and delete */
 
 button.edit,
-button.delete-btn {
+button.delete-btn,
+button.save {
     cursor: pointer;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -25,8 +26,16 @@ button.edit {
     color: #d89b01;
 }
 button.edit:hover, 
-button.delete-btn:hover {
+button.delete-btn:hover,
+button.save:hover {
     filter: saturate(5);
+}
+
+button.save {
+    background-color: rgb(248, 220, 248);
+    background-image: url(../icons/save.svg);
+    background-size: 40% 70%;
+    color: #864386;
 }
 
 /* button add new */
@@ -45,13 +54,12 @@ button.add-btn {
     background-color: rgb(187, 56, 157);
     padding: 1rem 1.2rem 1rem 3.6rem;
 }
+button.add-btn:hover {
+    background-color: rgb(218, 1, 168);
+}
 
 /* sorting arrows */
 
-th {
-    align-items: center;
-    overflow: hidden;
-}
 .arrow {
     display: inline-block;
     background-size: 100% 120%;
@@ -67,4 +75,18 @@ th {
 .arrow.arrow-up {
     background-image: url(../icons/arrow_down.svg);
     transform: rotate(180deg);
+}
+
+/* logout */
+
+#logout-form button {
+    cursor: pointer;
+    border: none;
+    background: white url(../icons/logout.svg) no-repeat;
+    background-size: 25% 100%;
+    background-position: center left;
+    padding-left: 2rem;
+}
+#logout-form button:hover {
+    text-decoration: underline;
 }
