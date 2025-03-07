@@ -1,0 +1,68 @@
+/* tables */
+
+table form {
+    display: inline-block;
+}
+
+table, .categories article {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: none;
+    border-collapse: collapse;
+    box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .05);
+    vertical-align: middle;
+}
+th, td {
+    padding: .6rem 1.2rem;
+}
+th {
+    background: #E5E7EB;
+    color: #555;
+}
+th a {
+    text-decoration: none;
+}
+th, td {
+    border-bottom: 1px solid #E5E7EB;
+}
+tr:last-child td {
+    padding-bottom: 1rem;
+}
+tr td span.id-number  {
+    display: inline-block;
+    background: #f9f9f9;
+    color: #aaa;
+    padding: .6rem;
+    min-width: 2.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+
+/* id:s */
+table td:first-child {
+    width: 4rem;
+}
+/* actions */
+table td:last-child {
+    width: 14rem;
+}
+
+
+/* filter-bar */
+
+#filter {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+    background: white;
+    padding: 1.2rem;
+    border-radius: .4rem;
+    box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .05);
+    margin-bottom: 1.6rem;
+}
+.filter-bar input, .filter-bar select {
+    padding: 0.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.25rem;
+}

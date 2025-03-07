@@ -29,7 +29,7 @@
                         ]) }}">
                         ID
                         @if ($sortBy == 'id')
-                            <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                        <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                         @endif
                     </th>
                     <th>
@@ -39,7 +39,7 @@
                         ]) }}">
                         Name
                         @if ($sortBy == 'name')
-                            <span>{{ $sortOrder == 'desc' ? '▲' : '▼' }}</span>
+                        <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                         @endif
                     </th>
                     <th>Description</th>
@@ -49,7 +49,7 @@
             <tbody>
                 @foreach($categories as $category)
                 <tr>
-                    <td><span class="category-id">{{ $category->id }}</span></td>
+                    <td><span class="id-number">{{ $category->id }}</span></td>
                     <td>
                         <a href="{{ route('categories.show', $category->id) }}" class="edit">{{ $category->name }}</a></td>
                     <td>{{ $category->description }}</td>

@@ -7,6 +7,11 @@ body.logged-in {
 main {
     min-height: 100vh;
 }
+main > section {
+    width: 100%;
+    height: 100%;
+    padding: 3.2rem;
+}
 
 .navbar {
     height: 100vh;
