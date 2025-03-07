@@ -53,7 +53,7 @@ main > section {
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-color: #fff;
-    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10), 0px 10px 15px 0px rgba(0, 0, 0, 0.10); /* Copied from figma, may be altered later */
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); /* Copied from figma, may be altered later */
 }
 
 .menu-heading {
@@ -129,5 +129,5 @@ main > section {
 }
 
 .user-avatar:hover {
-    background-color: black;
+    background-color: rgb(187, 56, 157);
 }
