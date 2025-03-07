@@ -22,6 +22,9 @@ button {
     background: #E5E7EB;
     cursor: pointer;
 }
+textarea {
+    min-height: 7rem;
+}
 
 a {
     color: inherit;
