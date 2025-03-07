@@ -2,9 +2,10 @@
 
     <section class="dashboard">
 
-    <h2>Welcome back {{ $user->name }} to Beverly dashboard!<h2>
+        <h2>Welcome back <strong>{{ $user->name }}</strong>, to beverly dashboard!</h2>
+        <p>Behind every great drink is a great admin</p>
         
-        <x-logout-form />
+        <img src="{{ asset('icons/drink.svg') }}" alt="Beverly logotype" />
 
     </section>
 
