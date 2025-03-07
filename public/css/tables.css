@@ -85,3 +85,9 @@ table td:last-child {
     border: 1px solid #E5E7EB;
     border-radius: .25rem;
 }
+.filter-bar input {
+    background: url(../icons/search.svg) no-repeat;
+    background-size: 5% 70%;
+    background-position: center left;
+    padding-left: 2.4rem;
+}

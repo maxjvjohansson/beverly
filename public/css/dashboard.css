@@ -29,7 +29,7 @@ main > section {
     align-items: center;
     justify-content: space-between;
     text-transform: lowercase;
-    padding: 1rem 1.5rem 1rem 1rem;
+    padding: 1rem 1.2rem;
     border-bottom: 1px solid #E5E7EB;
 }
 .menu-heading h2 {
@@ -44,50 +44,40 @@ main > section {
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin: 1.5rem 0 0 1.5rem;
+    margin: 1.5rem 0 0 1.2rem;
     padding: 0;
 }
-.navbar ul li {
+.navbar ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
     padding: 1rem 1.5rem 1rem 2.5rem;
     background-position: 0 47%;
     background-repeat: no-repeat;
 }
-.navbar ul li:nth-of-type(1) {
+.navbar ul li:nth-of-type(1) a {
     background-image: url(../icons/home.svg);
 }
-.navbar ul li:nth-of-type(2) {
+.navbar ul li:nth-of-type(2) a {
     background-image: url(../icons/drink.svg);
 }
-.navbar ul li:nth-of-type(3) {
+.navbar ul li:nth-of-type(3) a {
     background-image: url(../icons/categories.svg);
 }
-.navbar ul li:nth-of-type(4) {
+.navbar ul li:nth-of-type(4) a {
     background-image: url(../icons/user.svg);
-}
-.navbar ul li a {
-    color: black;
-    text-decoration: none;
 }
 .navbar ul li a:hover {
     text-decoration: underline;
 }
 
-
-#logout-form button {
-    padding: 1rem 1.5rem;
-    border-radius: 2rem;
-    border: 1px solid white;
-    color: #a051a0;
-    background-color: white;
-    cursor: pointer;
-}
-
 .navbar-footer {
     display: flex;
-    justify-content: start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.2rem;
     border-top: 1px solid #E5E7EB;
 }
 
