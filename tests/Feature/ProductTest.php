@@ -36,7 +36,9 @@ class ProductTest extends TestCase
                 'description' => 'Test Description',
                 'price' => 12.99,
                 'category_id' => $category->id,
-                'img_url' => 'https://placehold.co/100x100'
+                'img_url' => 'https://placehold.co/100x100',
+                'volume' => 500,
+                'unit' => 'ml',
             ]
         );
 
@@ -48,7 +50,9 @@ class ProductTest extends TestCase
                 'description' => 'Test Description',
                 'price' => 12.99,
                 'category_id' => $category->id,
-                'img_url' => 'https://placehold.co/100x100'
+                'img_url' => 'https://placehold.co/100x100',
+                'volume' => 500,
+                'unit' => 'ml',
             ]
         );
     }
@@ -81,7 +85,10 @@ class ProductTest extends TestCase
                 'description' => 'Updated Description',
                 'price' => 15.99,
                 'category_id' => $category->id,
-                'img_url' => 'https://placehold.co/200x200'
+                'img_url' => 'https://placehold.co/200x200',
+                'volume' => 1000,
+                'unit' => 'ml',
+
             ]
         );
 
@@ -94,7 +101,9 @@ class ProductTest extends TestCase
                 'description' => 'Updated Description',
                 'price' => 15.99,
                 'category_id' => $category->id,
-                'img_url' => 'https://placehold.co/200x200'
+                'img_url' => 'https://placehold.co/200x200',
+                'volume' => 1000,
+                'unit' => 'ml',
             ]
         );
     }

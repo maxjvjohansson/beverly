@@ -21,7 +21,9 @@ class ProductFactory extends Factory
             'description' => $this->faker->realText(100),
             'category_id' => $this->faker->randomNumber(),
             'price' => $this->faker->randomFloat(2, 1, 50),
-            'img_url' => $this->faker->imageUrl(150, 150, 'drinks')
+            'img_url' => $this->faker->imageUrl(150, 150, 'drinks'),
+            'volume' => $this->faker->randomElement([250, 500, 1000]),
+            'unit' => $this->faker->randomElement(['ml', 'cl', 'l', 'fl oz', 'g', 'pcs'])
         ];
     }
 }
