@@ -17,7 +17,7 @@
     grid-row: span 2;
 }
 
-/* tables */
+/* tables and content */
 
 table form {
     display: inline-block;
@@ -71,12 +71,15 @@ tr:hover {
 }
 
 /* id:s and actions */
+
 table td:first-child,
 table td:last-child {
     width: 1%;
     white-space: nowrap;
 }
+
 /* product images */
+
 table td img {
     background-color: var(--white);
     border-radius: var(--border-radius);
@@ -87,7 +90,7 @@ table td img {
     display: block;
 }
 
-/* filter-bar */
+/* filtering */
 
 #filter {
     display: grid;

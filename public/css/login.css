@@ -19,6 +19,8 @@ body:not(.logged-in) main {
     min-height: 80vh;
 }
 
+/* login form */
+
 #login-form {
     backdrop-filter: blur(.8rem);
     color: var(--white);
