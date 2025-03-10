@@ -1,5 +1,5 @@
 body:not(.logged-in) {
-    background-color: rgb(135, 50, 135);
+    background-color: #873287;
 }
 body:not(.logged-in):after {
     content: "";
@@ -21,7 +21,7 @@ body:not(.logged-in) main {
 
 #login-form {
     backdrop-filter: blur(.8rem);
-    color: white;
+    color: var(--white);
     width: 30rem;
     max-width: 90vw;
     padding: 0 3.2rem 4rem;
@@ -54,7 +54,7 @@ body:not(.logged-in) main {
     background-color: transparent;
 }
 #login-form input::placeholder {
-    color: white;
+    color: var(--white);
 }
 #login-form input {
     background-color: transparent; 
@@ -74,7 +74,7 @@ body:not(.logged-in) main {
     color: #8A158A;
 }
 #login-form button:hover {
-    background: white;
+    background: var(--white);
 }
 #login-form label {
     display: none;
@@ -84,8 +84,8 @@ body:not(.logged-in) main {
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    background-color: #5f0b24;
-    color: #ffc9c9;
+    background-color: var(--error-bg);
+    color: var(--error-txt);
     border-radius: .4rem;
     padding: 1.2rem;
 }
