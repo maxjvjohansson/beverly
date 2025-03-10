@@ -26,7 +26,7 @@ table form {
 table, .categories article {
     width: 100%;
     text-align: left;
-    background: #fff;
+    background: var(--white);
     border: none;
     border-collapse: collapse;
     box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .05);
@@ -36,13 +36,13 @@ th, td {
     padding: .6rem 1.2rem;
 }
 th {
-    background: #f9fafb;
+    background: var(--light-grey);
 }
 th a {
     text-decoration: none;
 }
 th, td {
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid var(--light-grey);
 }
 tr:first-child {
     border-radius: .4rem;
@@ -55,15 +55,18 @@ tr:last-child td {
 }
 tr td span.id-number  {
     display: inline-block;
-    background: #f3f4f6;
-    color: #525252;
+    background: var(--white-smoke);
+    color: var(--grey);
     padding: .6rem;
     min-width: 2.5rem;
     text-align: center;
     border-radius: .2rem;
 }
+tr:hover span.id-number {
+    background: var(--white);
+}
 tr:hover {
-    background-color: #f3f4f6;
+    background-color: var(--white-smoke);
 }
 
 /* id:s */
@@ -72,11 +75,11 @@ table td:first-child {
 }
 /* actions */
 table td:last-child {
-    width: 14rem;
+    width: 14.5rem;
 }
 /* product images */
 table td img {
-    background-color: white;
+    background-color: var(--white);
     border-radius: .4rem;
     max-width: 2.4rem;
     height: auto;
@@ -91,7 +94,7 @@ table td img {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 1rem;
-    background: white;
+    background: var(--white);
     padding: 1.2rem;
     border-radius: .4rem;
     box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .05);
@@ -99,7 +102,7 @@ table td img {
 }
 .filter-bar input, .filter-bar select {
     padding: .5rem;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--light-grey);
     border-radius: .25rem;
 }
 .filter-bar input {

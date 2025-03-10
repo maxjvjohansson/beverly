@@ -2,7 +2,7 @@
 
 .edit form,
 .show article {
-    background: white;
+    background: var(--white);
     padding: 1.2rem;
     border-radius: .4rem;
     display: flex;
@@ -45,10 +45,10 @@
     border-radius: .25rem;
 }
 .alert-success {
-    background-color: rgb(203, 230, 191);
-    color: #173809;
+    background-color: var(--success-bg);
+    color: var(--success-txt);
 }
 .alert-error {
-    background-color: #5f0b24;
-    color: #ffc9c9;
+    background-color: var(--error-bg);
+    color: var(--error-txt);
 }

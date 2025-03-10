@@ -1,5 +1,5 @@
 body.logged-in {
-    background-color: #f3f4f6;
+    background-color: var(--white-smoke);
     display: grid;
     grid-template-columns: 16rem 1fr;
 }
@@ -36,7 +36,7 @@ main > section {
 }
 .dashboard strong {
     font-weight: 900;
-    color:  rgb(187, 56, 157);
+    color: var(--fuchsia-plum);
 }
 .dashboard p {
     font-style: italic;
@@ -63,7 +63,7 @@ main > section {
     justify-content: space-between;
     text-transform: lowercase;
     padding: 1rem 1.2rem;
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid var(--light-grey);
 }
 .menu-heading h2 {
     font-size: 2rem;
@@ -82,7 +82,6 @@ main > section {
 }
 .navbar ul li a {
     display: block;
-    color: black;
     text-decoration: none;
     padding: 1rem 1.5rem 1rem 3.7rem;
     background-position: 1.2rem center;
@@ -102,7 +101,7 @@ main > section {
 }
 .navbar ul li a:hover {
     font-weight: bold;
-    background-color: #E5E7EB;
+    background-color: var(--light-grey);
 }
 
 .navbar-footer {
@@ -112,14 +111,14 @@ main > section {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 1.2rem;
-    border-top: 1px solid #E5E7EB;
+    border-top: 1px solid var(--light-grey);
 }
 
 .user-avatar {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border: .1rem solid black;
+    border: .1rem solid var(--black);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,7 +127,7 @@ main > section {
 }
 
 .user-avatar:hover {
-    color: white;
-    border-color: #bb389d;
-    background-color: #bb389d;
+    color: var(--white);
+    border-color: var(--fuchsia-plum);
+    background-color: var(--fuchsia-plum);
 }

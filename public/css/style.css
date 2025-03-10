@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    /* base colors */
+    --fuchsia-plum: #A80081;
+    --white: white;
+    --white-smoke: #f3f4f6;
+    --light-grey: #e5e7eb;
+    --grey: #525252;
+    --black: black;
+
+    /* messages */
+    --error-bg: #ffc9c9;
+    --error-txt: #5f0b24;
+    --success-bg: #cbe6bf;
+    --success-txt: #173809;
+
+    /* buttons */
+    --delete-bg: #ffe3e1;
+    --delete-txt: #990F00;
+    --edit-bg: #ffecbe;
+    --edit-txt: #664900;
+    --save-bg: #f8dcf8;
+    --save-txt: #6B006B;
+
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

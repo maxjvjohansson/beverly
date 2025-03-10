@@ -7,55 +7,54 @@ button.save {
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: left center;
-    padding: .4rem .8rem .4rem 2rem;
+    padding: .65rem .8rem .65rem 2.4rem;
     margin-right: .4rem;
-    border: 0px solid #eee;
+    border: none;
     border-radius: .4rem;
     font-size: .9em;
 }
 button.delete-btn {
-    background-color: #ffe3e1;
+    background-color: var(--delete-bg);
     background-image: url(../icons/trash.svg);
-    background-size: 35% 70%;
-    color: #990F00;
+    background-size: 40% 60%;
+    color: var(--delete-txt);
 }
 button.edit {
-    background-color: #ffecbe;
+    background-color: var(--edit-bg);
     background-image: url(../icons/edit.svg);
-    background-size: 40% 70%;
-    color: #664900;
+    background-size: 50% 55%;
+    color: var(--edit-txt);
+}
+button.save {
+    background-color: var(--save-bg);
+    background-image: url(../icons/save.svg);
+    background-size: 50% 65%;
+    color: var(--save-txt);
 }
 button.edit:hover, 
 button.delete-btn:hover,
 button.save:hover {
-    filter: saturate(5);
-}
-
-button.save {
-    background-color: #f8dcf8;
-    background-image: url(../icons/save.svg);
-    background-size: 40% 70%;
-    color: #6B006B;
+    filter: saturate(2);
 }
 
 /* button add new */
 
 button.add-btn {
-    color: white;
+    color: var(--white);
     cursor: pointer;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: left center;
     margin-right: .4rem;
-    border: 0px solid #eee;
+    border: none;
     border-radius: .4rem;
     background-image: url(../icons/plus-white.svg);
     background-size: 30% 70%;
-    background-color: #A80081;
+    background-color: var(--fuchsia-plum);
     padding: 1rem 1.2rem 1rem 3.6rem;
 }
 button.add-btn:hover {
-    background-color: #da01a8;
+    filter: saturate(1.5);
 }
 
 /* sorting arrows */
@@ -82,7 +81,7 @@ button.add-btn:hover {
 #logout-form button {
     cursor: pointer;
     border: none;
-    background: white url(../icons/logout.svg) no-repeat;
+    background: url(../icons/logout.svg) no-repeat;
     background-size: 25% 100%;
     background-position: center left;
     padding-left: 2rem;
