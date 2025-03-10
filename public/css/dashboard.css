@@ -6,7 +6,7 @@ body.logged-in {
 
 main {
     min-height: 100vh;
-    padding: 3.2rem;
+    padding: var(--large-padding);
 }
 main > section {
     width: 100%;
@@ -19,7 +19,7 @@ main > section {
     align-items: center;
     height: calc(80vh - (3.2rem * 2));
     text-align: center;
-    gap: 1rem;
+    gap: var(--gap);
 }
 .dashboard:before {
     content: "";
@@ -30,9 +30,9 @@ main > section {
     background: url(../img/bg.jpg) no-repeat bottom center;
     background-size: cover;
     background-attachment: fixed;
+    filter: grayscale(1) contrast(1.2);
+    mix-blend-mode: color-burn;
     opacity: .2;
-    filter: grayscale(1);
-    mix-blend-mode: hard-light;
 }
 .dashboard strong {
     font-weight: 900;
@@ -41,19 +41,16 @@ main > section {
 .dashboard p {
     font-style: italic;
 }
-.dashboard img {
-    width: 6.4rem;
-    margin-top: 3rem;
-}
 
 .navbar {
     height: 100vh;
     position: sticky;
     top: 0;
+    bottom: 0;
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-color: #fff;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); /* Copied from figma, may be altered later */
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .menu-heading {
@@ -62,7 +59,7 @@ main > section {
     align-items: center;
     justify-content: space-between;
     text-transform: lowercase;
-    padding: 1rem 1.2rem;
+    padding: var(--medium-padding);
     border-bottom: 1px solid var(--light-grey);
 }
 .menu-heading h2 {
@@ -77,13 +74,14 @@ main > section {
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin: 1.5rem 0 0;
+    margin: 1rem 0;
     padding: 0;
 }
 .navbar ul li a {
     display: block;
     text-decoration: none;
-    padding: 1rem 1.5rem 1rem 3.7rem;
+    padding: var(--medium-padding);
+    padding-left: 3.7rem;
     background-position: 1.2rem center;
     background-repeat: no-repeat;
 }
@@ -109,8 +107,7 @@ main > section {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 1.2rem;
+    padding: var(--medium-padding);
     border-top: 1px solid var(--light-grey);
 }
 
@@ -118,7 +115,7 @@ main > section {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border: .1rem solid var(--black);
+    border: .1rem solid var(--grey);
     display: flex;
     align-items: center;
     justify-content: center;
