@@ -9,6 +9,19 @@
             <label for="name">Product Name</label>
             <input type="text" id="name" name="name" value="{{ old('name', $product->name) }}" required>
 
+            <label for="volume">Volume</label>
+            <input type="number" id="volume" name="volume" value="{{ old('volume', $product->volume) }}" step="1" required>
+
+            <label for="unit">Unit</label>
+            <select id="unit" name="unit" required>
+                <option value="ml" {{ old('unit', $product->unit) == 'ml' ? 'selected' : '' }}>ml</option>
+                <option value="cl" {{ old('unit', $product->unit) == 'cl' ? 'selected' : '' }}>cl</option>
+                <option value="l" {{ old('unit', $product->unit) == 'l' ? 'selected' : '' }}>l</option>
+                <option value="fl oz" {{ old('unit', $product->unit) == 'fl oz' ? 'selected' : '' }}>fl oz</option>
+                <option value="g" {{ old('unit', $product->unit) == 'g' ? 'selected' : '' }}>g</option>
+                <option value="pcs" {{ old('unit', $product->unit) == 'pcs' ? 'selected' : '' }}>pcs</option>
+            </select>
+
             <label for="description">Description</label>
             <textarea id="description" name="description" required>{{ old('description', $product->description) }}</textarea>
 

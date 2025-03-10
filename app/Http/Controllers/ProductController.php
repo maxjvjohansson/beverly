@@ -23,7 +23,7 @@ class ProductController extends Controller
         $categories = Category::all();
         $query = Product::query();
 
-        // search multiple criterias
+        // Search multiple criterias
         if ($search) {
             $query->where(
                 function ($query) use ($search) {
@@ -39,21 +39,21 @@ class ProductController extends Controller
             );
         }
 
-        // filter by category
+        // Filter by category
         if ($categoryId) {
             $query->where('category_id', $categoryId);
         }
 
-        // sort by category via category_id
+        // Sort by category via category_id
         if ($sortBy == 'category') {
             $query->join('categories', 'products.category_id', '=', 'categories.id')
                 ->orderBy('categories.name', $sortOrder);
         } else {
-            // sort by product criterias
+            // Sort by product criterias
             if (in_array($sortBy, ['name', 'price', 'id'])) {
                 $query->orderBy($sortBy, $sortOrder);
             } else {
-                $query->orderBy('products.id', 'asc'); // default sorting
+                $query->orderBy('products.id', 'asc'); // Default sorting
             }
         }
 
@@ -82,7 +82,9 @@ class ProductController extends Controller
                 'description' => 'required|string',
                 'category_id' => 'required|exists:categories,id',
                 'price' => 'required|numeric|min:0',
-                'img_url' => 'nullable|string|url'
+                'img_url' => 'nullable|string|url',
+                'unit' => 'required|in:ml,cl,l,fl oz,g,pcs',
+                'volume' => 'required|numeric|min:0',
             ]
         );
 
@@ -119,7 +121,9 @@ class ProductController extends Controller
                 'description' => 'required|string',
                 'category_id' => 'required|exists:categories,id',
                 'price' => 'required|numeric|min:0',
-                'img_url' => 'nullable|string|url'
+                'img_url' => 'nullable|string|url',
+                'unit' => 'required|in:ml,cl,l,fl oz,g,pcs',
+                'volume' => 'required|numeric|min:0',
             ]
         );
 

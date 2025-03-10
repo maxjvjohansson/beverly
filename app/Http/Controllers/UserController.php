@@ -10,18 +10,15 @@ class UserController extends Controller
 {
     public function index(Request $request)
     {
-        // Hämta sorteringsparametrar från förfrågan
-        $sortBy = $request->get('sort_by', 'id');  // Standard sortering: ID
-        $sortOrder = $request->get('sort_order', 'asc');  // Standard ordning: asc
+        // Get sorting parameters upon request
+        $sortBy = $request->get('sort_by', 'id');  // Default sorting by ID
+        $sortOrder = $request->get('sort_order', 'asc');  // Default sorting order = ascending
 
-        // Hämtar användare och tillämpar sortering om det behövs
+        // Get users and apply sorting if needed
         $users = User::query();
-
-        // Kontrollera om sortBy är en giltig kolumn
         if (in_array($sortBy, ['id', 'name', 'email', 'role'])) {
             $users->orderBy($sortBy, $sortOrder);
         }
-
         $users = $users->paginate(10);
 
         return view('users.index', compact('users', 'sortBy', 'sortOrder'));
