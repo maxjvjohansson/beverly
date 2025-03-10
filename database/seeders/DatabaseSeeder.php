@@ -89,7 +89,6 @@ class DatabaseSeeder extends Seeder
         $categories = Category::all(); // have to get them after they're in the database to make them elquent to use them for randomizing products
 
         $products = [
-            // Coffee
             [
                 'name' => 'Lavazza Espresso',
                 'description' => 'Premium ground coffee for rich espresso.',
@@ -117,8 +116,6 @@ class DatabaseSeeder extends Seeder
                 'unit' => 'g',
                 'volume' => 450
             ],
-
-            // Tea
             [
                 'name' => 'Twinings Earl Grey',
                 'description' => 'Classic Earl Grey black tea bags.',
@@ -137,8 +134,6 @@ class DatabaseSeeder extends Seeder
                 'unit' => 'pcs',
                 'volume' => 17
             ],
-
-            // Juice
             [
                 'name' => 'Tropicana Orange Juice',
                 'description' => '100% pure squeezed orange juice.',
@@ -157,8 +152,6 @@ class DatabaseSeeder extends Seeder
                 'unit' => 'fl oz',
                 'volume' => 46
             ],
-
-            // Soda
             [
                 'name' => 'Coca Cola',
                 'description' => 'Classic Coca Cola can.',
@@ -195,8 +188,6 @@ class DatabaseSeeder extends Seeder
                 'unit' => 'ml',
                 'volume' => 330
             ],
-
-            // Energy Drink
             [
                 'name' => 'Red Bull',
                 'description' => 'Gives you wings.',
@@ -215,8 +206,6 @@ class DatabaseSeeder extends Seeder
                 'unit' => 'cl',
                 'volume' => 50
             ],
-
-            // Sports Drink
             [
                 'name' => 'Gatorade Lemon Lime',
                 'description' => 'Electrolyte sports drink.',
@@ -226,8 +215,6 @@ class DatabaseSeeder extends Seeder
                 'unit' => 'cl',
                 'volume' => 50
             ],
-
-            // Water
             [
                 'name' => 'Evian Natural Spring Water',
                 'description' => 'Refreshing natural spring water.',
@@ -237,19 +224,15 @@ class DatabaseSeeder extends Seeder
                 'unit' => 'cl',
                 'volume' => 50
             ],
-
-            // Alcohol
             [
                 'name' => 'Heineken Beer',
-                'description' => 'Premium lager beer.',
+                'description' => '5% ABV. Premium lager beer.',
                 'price' => 1.99,
                 'category' => 'Alcohol',
                 'img_url' => 'https://www.dryckeslaget.com/tuotekuvat/800x800/missing_image-2.jpg',
                 'unit' => 'ml',
                 'volume' => 330
             ],
-
-            // Hot Chocolate
             [
                 'name' => 'Swiss Miss Hot Cocoa',
                 'description' => 'Rich hot chocolate with marshmallows.',
@@ -258,6 +241,123 @@ class DatabaseSeeder extends Seeder
                 'img_url' => 'https://m.media-amazon.com/images/I/81ZqVUJO6xL.jpg',
                 'unit' => 'pcs',
                 'volume' => 8
+            ],
+            [
+                'name' => 'Illy Ground Espresso',
+                'description' => 'Smooth and balanced ground espresso coffee.',
+                'price' => 11.99,
+                'category' => 'Coffee',
+                'img_url' => 'https://m.media-amazon.com/images/I/81u8fAt0T+L.jpg',
+                'unit' => 'g',
+                'volume' => 250
+            ],
+            [
+                'name' => 'Nescafé Gold Instant Coffee',
+                'description' => 'Premium instant coffee for a rich flavor.',
+                'price' => 7.99,
+                'category' => 'Coffee',
+                'img_url' => 'https://www.fresh-store.eu/11982-large_default/nescafe-gold-instant-coffee-200g.jpg',
+                'unit' => 'g',
+                'volume' => 200
+            ],
+            [
+                'name' => 'Lipton Green Tea',
+                'description' => 'Refreshing green tea with a smooth taste.',
+                'price' => 3.99,
+                'category' => 'Tea',
+                'img_url' => 'https://www.papperskungen.se/images/asset.6396526.jpg',
+                'unit' => 'pcs',
+                'volume' => 25
+            ],
+            [
+                'name' => 'Simply Apple Juice',
+                'description' => '100% pure apple juice, never from concentrate.',
+                'price' => 4.29,
+                'category' => 'Juice',
+                'img_url' => 'https://images.cdn.retail.brookshires.com/zoom/98298f12-27c5-4a3a-aec2-917b325c9dfa.jpeg',
+                'unit' => 'ml',
+                'volume' => 1500
+            ],
+            [
+                'name' => 'Sprite',
+                'description' => 'Lemon-lime flavored soda with no caffeine.',
+                'price' => 1.39,
+                'category' => 'Soda',
+                'img_url' => 'https://gottebiten.se/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/s/p/sprite-burk_1.jpg',
+                'unit' => 'ml',
+                'volume' => 330
+            ],
+            [
+                'name' => 'Dr Pepper',
+                'description' => 'Unique blend of 23 flavors.',
+                'price' => 1.49,
+                'category' => 'Soda',
+                'img_url' => 'https://store.nana.co/_next/image?url=https%3A%2F%2Fcdn.nana.sa%2Fcatalog%2Flarge%2F9%2Fa%2F8%2Fc%2F9a8c51333628504233ae93c6ed3266af22fbdb73_8435185944009.jpg&w=1200&q=75',
+                'unit' => 'ml',
+                'volume' => 330
+            ],
+            [
+                'name' => 'Nocco Caribbean',
+                'description' => 'BCAA energy drink with a tropical taste.',
+                'price' => 2.99,
+                'category' => 'Energy Drink',
+                'img_url' => 'https://www.sportkost.se/pub_images/original/nocco_bcaa_caribbean_330ml.jpg',
+                'unit' => 'ml',
+                'volume' => 330
+            ],
+            [
+                'name' => 'Powerade Mountain Blast',
+                'description' => 'Electrolyte sports drink with a berry flavor.',
+                'price' => 2.49,
+                'category' => 'Sports Drink',
+                'img_url' => 'https://www.proteinbolaget.se/img/bilder/artiklar/zoom/PB-897_2.jpg?m=1614240219',
+                'unit' => 'ml',
+                'volume' => 500
+            ],
+            [
+                'name' => 'Fiji Natural Artesian Water',
+                'description' => 'Premium water with a soft and smooth taste.',
+                'price' => 2.29,
+                'category' => 'Water',
+                'img_url' => 'https://m.media-amazon.com/images/I/61kGuZKqMcL.jpg',
+                'unit' => 'ml',
+                'volume' => 1000
+            ],
+            [
+                'name' => 'Heineken 0.0',
+                'description' => '0% ABV. Non-alcoholic beer with the same great Heineken taste.',
+                'price' => 1.99,
+                'category' => 'Non-Alcoholic',
+                'img_url' => 'https://m.media-amazon.com/images/I/61jd8399FEL._SL1500_.jpg',
+                'unit' => 'ml',
+                'volume' => 330
+            ],
+            [
+                'name' => 'Corona Extra',
+                'description' => '4.5% ABV. Crisp and refreshing Mexican beer.',
+                'price' => 2.49,
+                'category' => 'Alcohol',
+                'img_url' => 'https://www.dryckeslaget.com/tuotekuvat/1200x1200/corona.png',
+                'unit' => 'ml',
+                'volume' => 355
+            ],
+            [
+                'name' => 'Jack Daniel’s Tennessee Whiskey',
+                'description' => '40% ABV. Smooth and mellow Tennessee whiskey.',
+                'price' => 24.99,
+                'category' => 'Alcohol',
+                'img_url' => 'https://www.gourmetencasa-tcm.com/17699-large_default/jack-daniel-s-70cl.jpg',
+                'unit' => 'ml',
+                'volume' => 700
+            ],
+            [
+                'name' => 'Cadbury Drinking Chocolate',
+                'description' => 'Classic rich and creamy hot chocolate mix.',
+                'price' => 5.99,
+                'category' => 'Hot Chocolate',
+                'img_url' => 'https://m.media-amazon.com/images/I/61ZbTmemAoL.jpg',
+                'unit' => 'g',
+                'volume' => 250
             ],
         ];
 
