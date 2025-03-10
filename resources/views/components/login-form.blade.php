@@ -1,7 +1,7 @@
 <form method="POST" action="/login" id="login-form">
     @csrf
     
-    <img src="{{ asset('icons/logo_beverly.svg') }}" alt="Beverly logotype" />
+    <img src="{{ asset('icons/logo_beverly_old.svg') }}" alt="Beverly logotype" />
     <h2>Beverly</h2>
 
     <!-- labels are only for screen readers, they are hidden with css, using placeholders within the input fields instead for styling purposes -->
