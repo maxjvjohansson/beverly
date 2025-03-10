@@ -82,7 +82,9 @@ class ProductController extends Controller
                 'description' => 'required|string',
                 'category_id' => 'required|exists:categories,id',
                 'price' => 'required|numeric|min:0',
-                'img_url' => 'nullable|string|url'
+                'img_url' => 'nullable|string|url',
+                'unit' => 'required|in:ml,cl,l,fl oz,g,pcs',
+                'volume' => 'required|numeric|min:0',
             ]
         );
 
@@ -119,7 +121,9 @@ class ProductController extends Controller
                 'description' => 'required|string',
                 'category_id' => 'required|exists:categories,id',
                 'price' => 'required|numeric|min:0',
-                'img_url' => 'nullable|string|url'
+                'img_url' => 'nullable|string|url',
+                'unit' => 'required|in:ml,cl,l,fl oz,g,pcs',
+                'volume' => 'required|numeric|min:0',
             ]
         );
 

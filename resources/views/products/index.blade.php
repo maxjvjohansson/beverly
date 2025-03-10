@@ -57,6 +57,7 @@
                             <span class="arrow {{ $sortOrder == 'desc' ? 'arrow-up' : 'arrow-down' }}"></span>
                             @endif
                         </th>
+                        <th>Size</th>
                         <th>
                             <a href="{{ route('products.index', [
                                 'sort_by' => 'category', 
@@ -94,6 +95,7 @@
                                 <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a>
                             </div>
                         </td>
+                        <td>{{ $product->volume }} {{ strtolower($product->unit) }}</td>
                         <td>{{ $product->category->name ?? 'N/A' }}</td>
                         <td>${{ $product->price }}</td>
                         <td>
