@@ -52,7 +52,7 @@
                     <td>
                         <button class="edit" type="button" onclick="window.location.href='{{ route('categories.edit', $category->id) }}'">
                             Edit
-                        </button><!-- improve accessability with a button -->
+                        </button>
 
                         @can('delete', $category)
                             <form action="{{ route('categories.destroy', $category) }}" method="POST" style="display: inline;">
@@ -76,6 +76,6 @@
             {{ $categories->appends(request()->query())->links('vendor.pagination.default') }}
         </div>
 
-    </section><!-- categories -->
+    </section>
 
 </x-layout>

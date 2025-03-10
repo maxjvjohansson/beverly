@@ -4,7 +4,6 @@
     <img src="{{ asset('icons/logo_beverly_old.svg') }}" alt="Beverly logotype" />
     <h2>Beverly</h2>
 
-    <!-- labels are only for screen readers, they are hidden with css, using placeholders within the input fields instead for styling purposes -->
     <label for="email">Email: </label>
     <input placeholder="Email" name="email" type="email" required>
 

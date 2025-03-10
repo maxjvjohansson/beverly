@@ -34,8 +34,6 @@ class DatabaseSeeder extends Seeder
             'role' => 'employee'
         ]);
 
-        // User::factory(10)->create();
-
         $categories = [
             [
                 'name' => 'Coffee',
@@ -86,7 +84,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        $categories = Category::all(); // have to get them after they're in the database to make them elquent to use them for randomizing products
+        $categories = Category::all(); // Seed categories before products
 
         $products = [
             [
