@@ -3,9 +3,9 @@
 .header {
     display: grid;
     grid-template-columns: 1fr auto;
-    justify-content: start;
-    align-items: center;
-    margin-bottom: 1rem;
+    align-items: end;
+    gap: var(--gap);
+    margin-bottom: 1.6rem;
 }
 .header h2 {
     grid-row: 1;
@@ -14,16 +14,16 @@
     grid-row: 2;
 }
 .header button {
-    grid-row: 2;
+    grid-row: span 2;
 }
 
-/* tables */
+/* tables and content */
 
 table form {
     display: inline-block;
 }
 
-table, .categories article {
+table {
     width: 100%;
     text-align: left;
     background: var(--white);
@@ -31,6 +31,7 @@ table, .categories article {
     border-collapse: collapse;
     box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .05);
     vertical-align: middle;
+    table-layout: auto;
 }
 th, td {
     padding: .6rem 1.2rem;
@@ -60,7 +61,7 @@ tr td span.id-number  {
     padding: .6rem;
     min-width: 2.5rem;
     text-align: center;
-    border-radius: .2rem;
+    border-radius: var(--border-radius);
 }
 tr:hover span.id-number {
     background: var(--white);
@@ -69,18 +70,19 @@ tr:hover {
     background-color: var(--white-smoke);
 }
 
-/* id:s */
-table td:first-child {
-    width: 4rem;
-}
-/* actions */
+/* id:s and actions */
+
+table td:first-child,
 table td:last-child {
-    width: 14.5rem;
+    width: 1%;
+    white-space: nowrap;
 }
+
 /* product images */
+
 table td img {
     background-color: var(--white);
-    border-radius: .4rem;
+    border-radius: var(--border-radius);
     max-width: 2.4rem;
     height: auto;
     aspect-ratio: 1;
@@ -88,26 +90,24 @@ table td img {
     display: block;
 }
 
-/* filter-bar */
+/* filtering */
 
 #filter {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 1rem;
+    gap: var(--gap);
     background: var(--white);
     padding: 1.2rem;
-    border-radius: .4rem;
+    border-radius: var(--border-radius);
     box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .05);
     margin-bottom: 1.6rem;
 }
 .filter-bar input, .filter-bar select {
-    padding: .5rem;
-    border: 1px solid var(--light-grey);
-    border-radius: .25rem;
+    padding: .6rem;
 }
 .filter-bar input {
     background: url(../icons/search.svg) no-repeat;
-    background-size: 4% 70%;
+    background-size: 5% 70%;
     background-position: center left;
-    padding-left: 2.4rem;
+    padding-left: 3rem;
 }

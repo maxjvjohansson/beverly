@@ -23,6 +23,12 @@
     --save-bg: #f8dcf8;
     --save-txt: #6B006B;
 
+    /* spacing */
+    --large-padding: 3.2rem;
+    --medium-padding: 1rem 1.2rem;
+    --small-padding: .65rem .8rem;
+    --border-radius: .4rem;
+    --gap: 1rem;
 }
 
 * {
@@ -32,6 +38,8 @@
 
 body {
     font: normal 1rem 'albert sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
 }
 
 label {
@@ -39,12 +47,16 @@ label {
 }
 input, select, textarea, button {
     font: inherit;
-    padding: .5rem;
-    border: 1px solid #E5E7EB;
+    padding: .4rem;
+    border: 1px solid var(--light-grey);
     border-radius: .25rem;
+
+    &:hover {
+        border-color: var(--grey);
+    }
 }
 button {
-    background: #E5E7EB;
+    background: var(--light-grey);
     cursor: pointer;
 }
 textarea {

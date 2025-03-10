@@ -1,5 +1,6 @@
-/* buttons edit and delete */
+/* buttons */
 
+button.add-btn,
 button.edit,
 button.delete-btn,
 button.save {
@@ -7,10 +8,10 @@ button.save {
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: left center;
-    padding: .65rem .8rem .65rem 2.4rem;
-    margin-right: .4rem;
+    padding: var(--small-padding);
+    padding-left: 2.4rem;
     border: none;
-    border-radius: .4rem;
+    border-radius: var(--border-radius);
     font-size: .9em;
 }
 button.delete-btn {
@@ -36,25 +37,25 @@ button.delete-btn:hover,
 button.save:hover {
     filter: saturate(2);
 }
-
-/* button add new */
-
 button.add-btn {
-    color: var(--white);
-    cursor: pointer;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: left center;
-    margin-right: .4rem;
-    border: none;
-    border-radius: .4rem;
     background-image: url(../icons/plus-white.svg);
-    background-size: 30% 70%;
     background-color: var(--fuchsia-plum);
-    padding: 1rem 1.2rem 1rem 3.6rem;
+    background-size: 30% 70%;
+    color: var(--white);
+    padding: var(--medium-padding);
+    padding-left: 3.6rem;
+    font-size: 1rem;
 }
 button.add-btn:hover {
     filter: saturate(1.5);
+}
+
+/* padding between action buttons and links */
+
+button + a,
+button + form,
+button + form + a {
+    margin-left: .4rem;
 }
 
 /* sorting arrows */

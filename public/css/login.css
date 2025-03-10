@@ -19,6 +19,8 @@ body:not(.logged-in) main {
     min-height: 80vh;
 }
 
+/* login form */
+
 #login-form {
     backdrop-filter: blur(.8rem);
     color: var(--white);
@@ -28,7 +30,7 @@ body:not(.logged-in) main {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: var(--gap);
     border-radius: 1rem;
     text-align: center;
     border: .2rem solid rgb(221, 160, 221, .5);
@@ -48,7 +50,7 @@ body:not(.logged-in) main {
 #login-form input,
 #login-form button {
     font: inherit;
-    padding: 1rem 1.5rem;
+    padding: var(--medium-padding);
     border-radius: 2rem;
     border: .1rem solid rgba(254, 218, 254, .4);
     background-color: transparent;
@@ -81,11 +83,11 @@ body:not(.logged-in) main {
 }
 .error-message {
     display: flex;
-    gap: 1rem;
+    gap: var(--gap);
     justify-content: center;
     align-items: center;
     background-color: var(--error-bg);
     color: var(--error-txt);
-    border-radius: .4rem;
+    border-radius: var(--border-radius);
     padding: 1.2rem;
 }
