@@ -71,7 +71,7 @@ body:not(.logged-in) main {
 }
 #login-form button {
     background: rgba(254, 218, 254, 1);
-    color: #a051a0;
+    color: #8A158A;
 }
 #login-form button:hover {
     background: white;
