@@ -8,6 +8,20 @@
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
 
+            <label for="volume">Volume</label>
+            <input type="number" id="volume" name="volume" step="1" required>
+
+            <label for="unit">Unit</label>
+            <select id="unit" name="unit" required>
+                <option value="" disabled selected>Select Unit</option>
+                <option value="ml">ml</option>
+                <option value="cl">cl</option>
+                <option value="l">l</option>
+                <option value="fl oz">fl oz</option>
+                <option value="g">g</option>
+                <option value="pcs">pcs</option>
+            </select>
+
             <label for="description">Description</label>
             <textarea id="description" name="description" required></textarea>
 

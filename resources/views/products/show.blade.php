@@ -4,6 +4,7 @@
         <h2>Show Product</h2>
         <article>
             <p><strong>Name:</strong> {{ $product->name }}</p>
+            <p><strong>Size:</strong> {{ $product->volume }}{{ strtolower($product->unit) }}</p>
             <p><strong>Description:</strong> {{ $product->description }}</p>
             <p><strong>Category:</strong> {{ $product->category->name ?? 'N/A' }}</p>
             <p><strong>Price:</strong> ${{ $product->price }}</p>
