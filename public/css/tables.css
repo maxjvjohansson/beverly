@@ -36,8 +36,7 @@ th, td {
     padding: .6rem 1.2rem;
 }
 th {
-    background: #E5E7EB;
-    color: #555;
+    background: #f9fafb;
 }
 th a {
     text-decoration: none;
@@ -57,7 +56,7 @@ tr:last-child td {
 tr td span.id-number  {
     display: inline-block;
     background: #f3f4f6;
-    color: #aaa;
+    color: #525252;
     padding: .6rem;
     min-width: 2.5rem;
     text-align: center;
@@ -105,7 +104,7 @@ table td img {
 }
 .filter-bar input {
     background: url(../icons/search.svg) no-repeat;
-    background-size: 5% 70%;
+    background-size: 4% 70%;
     background-position: center left;
     padding-left: 2.4rem;
 }

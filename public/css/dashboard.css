@@ -118,9 +118,8 @@ main > section {
 .user-avatar {
     width: 2rem;
     height: 2rem;
-    color: white;
-    background-color: plum;
     border-radius: 50%;
+    border: .1rem solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,5 +128,7 @@ main > section {
 }
 
 .user-avatar:hover {
-    background-color: rgb(187, 56, 157);
+    color: white;
+    border-color: #bb389d;
+    background-color: #bb389d;
 }

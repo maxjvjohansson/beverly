@@ -9,7 +9,7 @@
     border-radius: 0 0 .8rem .8rem;
 }
 .pagination p {
-    color: #a4a7ac;
+    color: #72757E;
     font-weight: 500;
 }
 
@@ -24,8 +24,8 @@
     background: #f3f4f6;
 }
 a.active {
-    background: #bb389d;
-    border-color: #bb389d;
+    background: #A80081;
+    border-color: #A80081;
     color: white;
 }
 .pages a img {

@@ -14,16 +14,16 @@ button.save {
     font-size: .9em;
 }
 button.delete-btn {
-    background-color: rgb(250, 230, 228);
+    background-color: #ffe3e1;
     background-image: url(../icons/trash.svg);
     background-size: 35% 70%;
-    color: salmon;
+    color: #990F00;
 }
 button.edit {
-    background-color: #fff1cf;
+    background-color: #ffecbe;
     background-image: url(../icons/edit.svg);
     background-size: 40% 70%;
-    color: #d89b01;
+    color: #664900;
 }
 button.edit:hover, 
 button.delete-btn:hover,
@@ -32,10 +32,10 @@ button.save:hover {
 }
 
 button.save {
-    background-color: rgb(248, 220, 248);
+    background-color: #f8dcf8;
     background-image: url(../icons/save.svg);
     background-size: 40% 70%;
-    color: #864386;
+    color: #6B006B;
 }
 
 /* button add new */
@@ -51,11 +51,11 @@ button.add-btn {
     border-radius: .4rem;
     background-image: url(../icons/plus-white.svg);
     background-size: 30% 70%;
-    background-color: rgb(187, 56, 157);
+    background-color: #A80081;
     padding: 1rem 1.2rem 1rem 3.6rem;
 }
 button.add-btn:hover {
-    background-color: rgb(218, 1, 168);
+    background-color: #da01a8;
 }
 
 /* sorting arrows */
