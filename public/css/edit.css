@@ -41,8 +41,14 @@
     align-items: center;
     justify-content: center;
     padding: 1.2rem;
-    background-color: rgb(203, 230, 191);
-    color: #173809;
     margin-bottom: 2rem;
     border-radius: .25rem;
+}
+.alert-success {
+    background-color: rgb(203, 230, 191);
+    color: #173809;
+}
+.alert-error {
+    background-color: #5f0b24;
+    color: #ffc9c9;
 }

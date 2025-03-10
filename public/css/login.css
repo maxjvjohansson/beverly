@@ -70,7 +70,7 @@ body:not(.logged-in) main {
     background-size: 18% 60%;
 }
 #login-form button {
-    background: rgba(254, 218, 254, 1);
+    background: #fedafe;
     color: #8A158A;
 }
 #login-form button:hover {
