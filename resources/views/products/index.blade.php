@@ -25,7 +25,7 @@
                 @endforeach
             </select>
 
-        </form><!-- end filter -->
+        </form>
 
         @if($products->isEmpty())
             <p>No products available.</p>
@@ -106,7 +106,7 @@
                         <td>
                             <button class="edit" type="button" onclick="window.location.href='{{ route('products.edit', $product->id) }}'">
                                 Edit
-                            </button><!-- Use icons instead? -->
+                            </button>
                             @can('delete', $product)
                                 <form action="{{ route('products.destroy', $product) }}" method="POST" style="display: inline;">
                                     @csrf
