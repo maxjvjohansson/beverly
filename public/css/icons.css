@@ -1,0 +1,92 @@
+/* buttons */
+
+button.add-btn,
+button.edit,
+button.delete-btn,
+button.save {
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: var(--small-padding);
+    padding-left: 2.4rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: .9em;
+}
+button.delete-btn {
+    background-color: var(--delete-bg);
+    background-image: url(../icons/trash.svg);
+    background-size: 40% 60%;
+    color: var(--delete-txt);
+}
+button.edit {
+    background-color: var(--edit-bg);
+    background-image: url(../icons/edit.svg);
+    background-size: 50% 55%;
+    color: var(--edit-txt);
+}
+button.save {
+    background-color: var(--save-bg);
+    background-image: url(../icons/save.svg);
+    background-size: 50% 65%;
+    color: var(--save-txt);
+}
+button.edit:hover, 
+button.delete-btn:hover,
+button.save:hover {
+    filter: saturate(2);
+}
+button.add-btn {
+    background-image: url(../icons/plus-white.svg);
+    background-color: var(--fuchsia-plum);
+    background-size: 30% 70%;
+    color: var(--white);
+    padding: var(--medium-padding);
+    padding-left: 3.6rem;
+    font-size: 1rem;
+}
+button.add-btn:hover {
+    filter: saturate(1.5);
+}
+
+/* padding between action buttons and links */
+
+button + a,
+button + form,
+button + form + a {
+    margin-left: .4rem;
+}
+
+/* sorting arrows */
+
+.arrow {
+    display: inline-block;
+    background-size: 100% 120%;
+    background-position: center;
+    height: .9rem;
+    width: 1.2rem;
+    position: relative;
+    top: .1rem;
+}
+.arrow.arrow-down {
+    background-image: url(../icons/arrow_down.svg);
+}
+.arrow.arrow-up {
+    background-image: url(../icons/arrow_down.svg);
+    transform: rotate(180deg);
+}
+
+/* logout */
+
+#logout-form button {
+    cursor: pointer;
+    border: none;
+    background: url(../icons/logout.svg) no-repeat;
+    background-size: 25% 100%;
+    background-position: center left;
+    padding-left: 2rem;
+}
+#logout-form button:hover {
+    font-weight: bold;
+}

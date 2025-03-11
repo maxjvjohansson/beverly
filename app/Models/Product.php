@@ -7,14 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProductFactory> */
+    /**
+     * @use HasFactory<\Database\Factories\ProductFactory>
+     */
     use HasFactory;
 
     protected $fillable = [
         'name',
         'description',
         'category_id',
-        'price'
+        'price',
+        'img_url',
+        'unit',
+        'volume',
     ];
 
     public function category()

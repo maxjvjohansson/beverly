@@ -1,0 +1,35 @@
+/* pagination */
+
+.pagination {
+    padding:  1.2rem;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+.pagination p {
+    color: var(--grey);
+}
+
+.pages a {
+    display: inline-block;
+    border: .1rem solid var(--light-grey);
+    padding: .5rem .8rem;
+    border-radius: calc(var(--border-radius));
+    text-decoration: none;
+}
+.pages a:hover:not(.disabled):not(.active) {
+    border-color: var(--grey);
+}
+a.active {
+    background: var(--fuchsia-plum);
+    border-color: var(--fuchsia-plum);
+    color: var(--white);
+}
+.pages a img {
+    max-height: .9rem;
+    display: inline;
+    position: relative;
+    top: .1rem;
+}

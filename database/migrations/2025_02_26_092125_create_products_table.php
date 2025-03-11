@@ -18,6 +18,9 @@ return new class extends Migration
             $table->text('description');
             $table->foreignIdFor(Category::class, 'category_id')->nullable()->constrained()->nullOnDelete();
             $table->decimal('price', 10, 2);
+            $table->text('img_url')->nullable();
+            $table->integer('volume');
+            $table->enum('unit', ['ml', 'cl', 'l', 'fl oz', 'g', 'pcs']);
             $table->timestamps();
         });
     }

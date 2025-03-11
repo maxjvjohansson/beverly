@@ -1,0 +1,54 @@
+/* edit and show-files */
+
+.edit form,
+.show article {
+    background: var(--white);
+    padding: 1.2rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap);
+    box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .05);
+}
+.edit h2,
+.show h2 {
+    margin-bottom: 1rem;
+}
+.show img {
+    max-width: 50%;
+    height: auto;
+}
+
+.edit form {
+    input, select, textarea {
+        width: 50vw;
+        min-width: 10rem;
+    }
+}
+
+.edit details label,
+.edit details input {
+    display: block;
+    margin: 1rem 0;
+}
+
+/* alert messages */
+
+.alert {
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+}
+.alert-success {
+    background-color: var(--success-bg);
+    color: var(--success-txt);
+}
+.alert-error {
+    background-color: var(--error-bg);
+    color: var(--error-txt);
+}
