@@ -17,7 +17,7 @@
 - **Database**: MySQL
 - **Authentication**: Laravel's built-in authentication
 - **Testing**: PHPUnit, Laravel feature and unit tests
-- **Deployment**: GitHub Actions CI/CD
+- **CI**: GitHub Actions (used for automated testing)
 
 ## Installation & Setup
 1. **Clone the repository**
